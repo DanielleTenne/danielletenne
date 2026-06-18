@@ -42,6 +42,7 @@ export const projects: Project[] = [
   },
   {
     slug: "taco-revolution",
+    route: "/chicano",
     title: "Taco Revolution",
     image: tacoAsset.url,
     description:

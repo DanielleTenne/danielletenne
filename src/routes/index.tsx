@@ -94,9 +94,14 @@ function Index() {
           {selectedWork.map((w) => (
             <div
               key={w.title}
-              className={`${w.bg} ${w.text} flex aspect-square items-center justify-center rounded-sm p-6 text-center text-lg font-semibold`}
+              className="group relative aspect-square overflow-hidden rounded-sm bg-stone-100"
             >
-              {w.title}
+              <img
+                src={w.image}
+                alt={w.title}
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
             </div>
           ))}
         </div>

@@ -78,13 +78,13 @@ function Index() {
       {/* Selected Work */}
       <section className="mx-auto max-w-7xl px-6 py-20">
         <h2 className="mb-10 text-2xl font-extrabold">Selected Work</h2>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
           {projects.map((p) => (
             <Link
               key={p.slug}
               to="/projects/$slug"
               params={{ slug: p.slug }}
-              className="group relative block overflow-hidden rounded-sm bg-stone-100"
+              className="group relative mb-6 block break-inside-avoid overflow-hidden rounded-sm"
               aria-label={p.title}
             >
               <img

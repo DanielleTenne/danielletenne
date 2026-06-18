@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProjectMetadataTags } from "@/components/ProjectMetadataTags";
+import presentationsAsset from "@/assets/work/penlink-presentations.jpg.asset.json";
+
 
 export const Route = createFileRoute("/project-details")({
   head: () => ({
@@ -108,13 +110,18 @@ function ProjectDetailsPage() {
             </Section>
 
             <Section title="Presentations">
-              <Placeholder label="Presentation deck" ratio="aspect-[16/10]" />
+              <img
+                src={presentationsAsset.url}
+                alt="PenLink presentation slide deck showcasing AI-powered OSINT platform layouts"
+                className="w-full rounded-sm"
+              />
               <p className="text-sm leading-relaxed text-[#0a1b4d]/80">
                 Built a modular slide library used across sales, conferences,
                 and internal communications. Each layout balances dense
                 information with clear, branded visual rhythm.
               </p>
             </Section>
+
 
             <Section title="Printable">
               <Placeholder label="Brochure spread" ratio="aspect-[16/9]" />

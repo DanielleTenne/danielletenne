@@ -31,7 +31,7 @@ export const Route = createFileRoute("/n-bakery")({
   component: () => (
     <ProjectDetailsTemplate
       title={TITLE}
-      tags={["Design systems", "Marketing collateral", "Exhibition booth design"]}
+      tags={["Branding & Identity", "Illustration", "Logo design", "Marketing collateral", "Packaging Design"]}
       description={DESC}
       images={IMAGES}
     />

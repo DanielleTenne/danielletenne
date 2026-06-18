@@ -30,11 +30,12 @@ const artImages: ArtImage[] = [
   { src: artEastern.url, alt: "Eastern Pulse" },
   { src: artHaifa.url, alt: "I Love Haifa" },
   { src: artAnchors.url, alt: "Anchors" },
+  { src: artNight.url, alt: "Night animation" },
 ];
 
-const artRow1: ArtImage[] = [artImages[0], artImages[1], artImages[2], artImages[3], artImages[1]];
-const artRow2: ArtImage[] = [artImages[2], artImages[3], artImages[0], artImages[1], artImages[2]];
-const artRow3: ArtImage[] = [artImages[3], artImages[0], artImages[1], artImages[2], artImages[0]];
+const artRow1: ArtImage[] = [artImages[0], artImages[1], artImages[2], artImages[3], artImages[4]];
+const artRow2: ArtImage[] = [artImages[2], artImages[4], artImages[0], artImages[1], artImages[3]];
+const artRow3: ArtImage[] = [artImages[4], artImages[3], artImages[1], artImages[2], artImages[0]];
 
 function ScrollRow({
   images,

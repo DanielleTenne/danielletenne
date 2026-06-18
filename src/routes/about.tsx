@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import portraitImg from "../assets/about-portrait.jpg";
+import portraitAsset from "../assets/about-portrait.gif.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -48,10 +48,8 @@ function AboutPage() {
           </div>
           <div className="flex justify-center md:justify-end">
             <img
-              src={portraitImg}
+              src={portraitAsset.url}
               alt="Danielle Tenne portrait"
-              width={1024}
-              height={1024}
               className="h-auto w-full max-w-md object-cover"
               loading="lazy"
             />

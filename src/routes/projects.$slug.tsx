@@ -5,7 +5,7 @@ import { ProjectMetadataTags } from "@/components/ProjectMetadataTags";
 import { projectsBySlug, type Project } from "@/lib/projects";
 
 export const Route = createFileRoute("/projects/$slug")({
-  loader: ({ params }) => {
+  loader: ({ params }): Project => {
     const project = projectsBySlug[params.slug];
     if (!project) throw notFound();
     return project;

@@ -14,7 +14,7 @@ const TITLE = "Kai Lighters";
 const DESC = "Branding design Kai-Lighters, the premium paid upgrade for Kai. Kai is a conversational AI for young people's well-being.";
 const URL = "https://pixel-perfect-playbook-185.lovable.app/kai-lighters";
 
-const IMAGES = [brandbook, logo, appicon, animation, stickers, phones, tshirts, beanie, pins];
+const IMAGES = [logo, brandbook, appicon, animation, stickers, phones, tshirts, beanie, pins];
 
 export const Route = createFileRoute("/kai-lighters")({
   head: () => ({

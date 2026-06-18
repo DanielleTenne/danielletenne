@@ -35,18 +35,31 @@ const artRow1: ArtImage[] = [artImages[0], artImages[1], artImages[2], artImages
 const artRow2: ArtImage[] = [artImages[2], artImages[3], artImages[0], artImages[1], artImages[2]];
 const artRow3: ArtImage[] = [artImages[3], artImages[0], artImages[1], artImages[2], artImages[0]];
 
-function MarqueeRow({ images, direction }: { images: ArtImage[]; direction: "left" | "right" }) {
-  const animClass = direction === "left" ? "animate-marquee-left" : "animate-marquee-right";
-  const loop = [...images, ...images];
+function ScrollRow({
+  images,
+  direction,
+  progress,
+}: {
+  images: ArtImage[];
+  direction: "left" | "right";
+  progress: number;
+}) {
+  // Subtle shift: ~5% of row width across the section's scroll range.
+  const sign = direction === "right" ? 1 : -1;
+  // Center the resting position so there's room to move both ways visually.
+  const offsetPct = sign * (progress - 0.5) * 5;
   return (
     <div className="overflow-hidden">
-      <div className={`flex w-max gap-6 ${animClass}`}>
-        {loop.map((img, idx) => (
+      <div
+        className="flex w-max gap-6"
+        style={{ transform: `translate3d(${offsetPct}%, 0, 0)` }}
+      >
+        {images.map((img, idx) => (
           <img
             key={idx}
             src={img.src}
             alt={img.alt}
-            className="h-56 w-auto shrink-0 rounded-sm object-cover md:h-72 lg:h-80"
+            className="h-56 w-auto shrink-0 rounded-none object-cover md:h-72 lg:h-80"
             loading="lazy"
           />
         ))}

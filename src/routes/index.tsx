@@ -11,6 +11,8 @@ import artAnchors from "@/assets/art/anchors.jpg.asset.json";
 import artNight from "@/assets/art/halayla-haze.gif.asset.json";
 import artShay1 from "@/assets/art/shayachli-1.gif.asset.json";
 import artShay4 from "@/assets/art/shayachli-4.gif.asset.json";
+import artHaze3 from "@/assets/art/halayla-haze-3.gif.asset.json";
+import artPagmar5 from "@/assets/art/pagmar-5.gif.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,8 +39,10 @@ const artImages: ArtImage[] = [
 
 const shay1: ArtImage = { src: artShay1.url, alt: "Shayach Li 1" };
 const shay4: ArtImage = { src: artShay4.url, alt: "Shayach Li 4" };
+const haze3: ArtImage = { src: artHaze3.url, alt: "Halayla Haze 3" };
+const pagmar5: ArtImage = { src: artPagmar5.url, alt: "Pagmar 5" };
 
-const artRow1: ArtImage[] = [shay1, artImages[1], artImages[2], artImages[3], artImages[4]];
+const artRow1: ArtImage[] = [shay1, artImages[1], haze3, pagmar5, artImages[4]];
 const artRow2: ArtImage[] = [artImages[2], shay4, artImages[0], artImages[1], artImages[3]];
 const artRow3: ArtImage[] = [artImages[4], artImages[3], artImages[1], artImages[2], artImages[0]];
 

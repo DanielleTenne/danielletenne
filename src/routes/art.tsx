@@ -6,6 +6,8 @@ import easternPulse from "../assets/art/eastern-pulse-2.jpeg.asset.json";
 import ayalev1 from "../assets/art/ayalev-1.gif.asset.json";
 import ayalev2 from "../assets/art/ayalev-2.gif.asset.json";
 import ayalev3 from "../assets/art/ayalev-3-2.gif.asset.json";
+import escapiz from "../assets/art/escapiz-1-2.gif.asset.json";
+import anchors from "../assets/art/anchors-2.jpg.asset.json";
 
 export const Route = createFileRoute("/art")({
   head: () => ({
@@ -30,25 +32,18 @@ const leftColumn: Piece[] = [
   { title: "Pagmar", ratio: "aspect-[16/9]", src: coverPagmar.url },
   { title: "I Love Haifa — Houses", ratio: "aspect-[16/9]", src: ayalev1.url },
   { title: "I Love Haifa — City", ratio: "aspect-[16/9]", src: ayalev3.url },
-  { title: "Hallway", ratio: "aspect-[4/5]", gradient: "from-slate-800 via-zinc-800 to-neutral-900" },
-  { title: "Heartbird", ratio: "aspect-[16/10]", gradient: "from-stone-400 via-stone-500 to-stone-600" },
-  { title: "Floating", ratio: "aspect-[16/9]", gradient: "from-emerald-200 via-teal-300 to-amber-200" },
-  { title: "Starlit", ratio: "aspect-[16/10]", gradient: "from-indigo-900 via-blue-900 to-slate-900" },
+  { title: "Escapiz", ratio: "aspect-[16/9]", src: escapiz.url },
 ];
 
 const rightColumn: Piece[] = [
   { title: "Eastern Pulse", ratio: "aspect-square", src: easternPulse.url },
   { title: "I Love Haifa — Kitchen", ratio: "aspect-[16/9]", src: ayalev2.url },
-  { title: "Hands & Box", ratio: "aspect-[4/3]", gradient: "from-rose-300 via-rose-400 to-rose-700" },
-  { title: "Portrait Doll", ratio: "aspect-[4/5]", gradient: "from-rose-200 via-pink-300 to-violet-400" },
-  { title: "Brick Bird", ratio: "aspect-[16/10]", gradient: "from-neutral-700 via-neutral-800 to-neutral-900" },
-  { title: "Floating Notes", ratio: "aspect-[16/10]", gradient: "from-indigo-800 via-blue-900 to-slate-900" },
-  { title: "Anchors", ratio: "aspect-[3/4]", gradient: "from-stone-300 via-stone-400 to-stone-600" },
+  { title: "Anchors", ratio: "aspect-square", src: anchors.url },
 ];
 
 function Tile({ piece }: { piece: Piece }) {
   return (
-    <div className={`group relative ${piece.ratio} w-full overflow-hidden rounded-sm`}>
+    <div className={`relative ${piece.ratio} w-full overflow-hidden rounded-none`}>
       {piece.src ? (
         <img src={piece.src} alt={piece.title} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
       ) : (
@@ -59,7 +54,6 @@ function Tile({ piece }: { piece: Piece }) {
           </span>
         </>
       )}
-      <span className="pointer-events-none absolute inset-0 bg-[#020E3C]/50 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
     </div>
   );
 }

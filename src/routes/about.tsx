@@ -29,12 +29,22 @@ function AboutPage() {
               visual and marketing designer,<br />
               based in Herzliya, Israel.
             </h1>
-            <div className="mt-8 space-y-1 text-sm leading-relaxed text-[#0a1b4d]">
-              <p>I'm a multidisciplinary designer, a creative problem-solver,</p>
-              <p>with a background in illustration and motion design.</p>
-              <p>I graduated as a Visual Communication Designer in July 2021.</p>
-              <p>I love visual storytelling, and especially enjoy bringing creative concepts to life,</p>
-              <p>from the idea to the final touch.</p>
+            <div className="mt-8 space-y-6 text-sm leading-relaxed text-[#0a1b4d]">
+              <p>
+                I'm a multidisciplinary designer, a creative problem-solver,
+              </p>
+              <p>
+                with a background in illustration and motion design.
+              </p>
+              <p>
+                I graduated as a Visual Communication Designer in July 2021.
+              </p>
+              <p>
+                I love visual storytelling, and especially enjoy bringing creative concepts to life,
+              </p>
+              <p>
+                from the idea to the final touch.
+              </p>
             </div>
             <div className="mt-8">
               <p className="text-lg font-bold">Let's talk!</p>

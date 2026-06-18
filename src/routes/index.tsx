@@ -35,8 +35,11 @@ const artImages: ArtImage[] = [
   { src: artNight.url, alt: "Night animation" },
 ];
 
-const artRow1: ArtImage[] = [artImages[0], artImages[1], artImages[2], artImages[3], artImages[4]];
-const artRow2: ArtImage[] = [artImages[2], artImages[4], artImages[0], artImages[1], artImages[3]];
+const shay1: ArtImage = { src: artShay1.url, alt: "Shayach Li 1" };
+const shay4: ArtImage = { src: artShay4.url, alt: "Shayach Li 4" };
+
+const artRow1: ArtImage[] = [shay1, artImages[1], artImages[2], artImages[3], artImages[4]];
+const artRow2: ArtImage[] = [artImages[2], shay4, artImages[0], artImages[1], artImages[3]];
 const artRow3: ArtImage[] = [artImages[4], artImages[3], artImages[1], artImages[2], artImages[0]];
 
 function ScrollRow({

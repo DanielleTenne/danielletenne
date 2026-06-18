@@ -65,7 +65,7 @@ function AboutPage() {
           </h2>
           <a
             href="mailto:tenne.dani@gmail.com"
-            className="inline-flex items-center gap-2 text-sm text-sky-300 hover:underline"
+            className="inline-flex items-center gap-2 text-sm text-[#4D72FA] hover:text-white hover:underline"
           >
             tenne.dani@gmail.com
             <span>→</span>

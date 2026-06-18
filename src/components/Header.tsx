@@ -10,7 +10,7 @@ export function Header() {
     <header className="border-b border-transparent">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         <Link to="/">
-          <img src="/src/assets/logo.svg" alt="Danielle Tenne" className="h-8 w-auto" />
+          <img src="/logo.svg" alt="Danielle Tenne" className="h-8 w-auto" />
         </Link>
 
         {/* Desktop nav */}

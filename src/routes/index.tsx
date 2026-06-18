@@ -16,6 +16,7 @@ import artPagmar5 from "@/assets/art/pagmar-5.gif.asset.json";
 import artMarvin1 from "@/assets/art/marvin-1.gif.asset.json";
 import artAyalev3 from "@/assets/art/ayalev-3.gif.asset.json";
 import artHazeh12 from "@/assets/art/halayla-hazeh-1-2.gif.asset.json";
+import artEscapiz1 from "@/assets/art/escapiz-1.gif.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({

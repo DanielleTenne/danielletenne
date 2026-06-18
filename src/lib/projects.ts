@@ -27,6 +27,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "penlink-ui-system",
+    route: "/penlink",
     title: "Penlink",
     image: penlinkAsset.url,
     description:

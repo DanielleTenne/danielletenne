@@ -8,6 +8,7 @@ import artCover from "@/assets/art/cover-pagmar.gif.asset.json";
 import artEastern from "@/assets/art/eastern-pulse.jpeg.asset.json";
 import artHaifa from "@/assets/art/i-love-haifa.gif.asset.json";
 import artAnchors from "@/assets/art/anchors.jpg.asset.json";
+import artNight from "@/assets/art/halayla-haze.gif.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -29,11 +30,12 @@ const artImages: ArtImage[] = [
   { src: artEastern.url, alt: "Eastern Pulse" },
   { src: artHaifa.url, alt: "I Love Haifa" },
   { src: artAnchors.url, alt: "Anchors" },
+  { src: artNight.url, alt: "Night animation" },
 ];
 
-const artRow1: ArtImage[] = [artImages[0], artImages[1], artImages[2], artImages[3], artImages[1]];
-const artRow2: ArtImage[] = [artImages[2], artImages[3], artImages[0], artImages[1], artImages[2]];
-const artRow3: ArtImage[] = [artImages[3], artImages[0], artImages[1], artImages[2], artImages[0]];
+const artRow1: ArtImage[] = [artImages[0], artImages[1], artImages[2], artImages[3], artImages[4]];
+const artRow2: ArtImage[] = [artImages[2], artImages[4], artImages[0], artImages[1], artImages[3]];
+const artRow3: ArtImage[] = [artImages[4], artImages[3], artImages[1], artImages[2], artImages[0]];
 
 function ScrollRow({
   images,

@@ -74,18 +74,22 @@ function Index() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <h2 className="mb-10 text-2xl font-extrabold">Selected Work</h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {selectedWork.map((w) => (
-            <div
-              key={w.title}
-              className="group relative aspect-square overflow-hidden rounded-sm bg-stone-100"
+          {projects.map((p) => (
+            <Link
+              key={p.slug}
+              to="/projects/$slug"
+              params={{ slug: p.slug }}
+              className="group relative block overflow-hidden rounded-sm bg-stone-100"
+              aria-label={p.title}
             >
               <img
-                src={w.image}
-                alt={w.title}
+                src={p.image}
+                alt={p.title}
                 loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="block h-auto w-full"
               />
-            </div>
+              <span className="pointer-events-none absolute inset-0 bg-[#020E3C]/50 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
+            </Link>
           ))}
         </div>
       </section>

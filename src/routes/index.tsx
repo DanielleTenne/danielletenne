@@ -42,9 +42,10 @@ const shay1: ArtImage = { src: artShay1.url, alt: "Shayach Li 1" };
 const shay4: ArtImage = { src: artShay4.url, alt: "Shayach Li 4" };
 const haze3: ArtImage = { src: artHaze3.url, alt: "Halayla Haze 3" };
 const pagmar5: ArtImage = { src: artPagmar5.url, alt: "Pagmar 5" };
+const marvin1: ArtImage = { src: artMarvin1.url, alt: "Marvin 1" };
 
 const artRow1: ArtImage[] = [shay4, artImages[1], pagmar5, artImages[4], haze3];
-const artRow2: ArtImage[] = [haze3, shay1, artImages[3], artImages[0], shay4];
+const artRow2: ArtImage[] = [haze3, shay1, artImages[3], marvin1, shay4];
 const artRow3: ArtImage[] = [pagmar5, artImages[0], shay1, artImages[2], artImages[4]];
 
 function ScrollRow({

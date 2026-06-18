@@ -12,4 +12,9 @@ export function Footer() {
         </nav>
         <div className="flex flex-col items-end gap-1">
           <a href="#" className="hover:opacity-70">LinkedIn</a>
-          <a href=
+          <a href="#" className="hover:opacity-70">Instagram</a>
+        </div>
+      </div>
+    </footer>
+  );
+}

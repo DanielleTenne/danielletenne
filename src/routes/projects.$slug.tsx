@@ -91,7 +91,7 @@ function ProjectPage() {
               />
             </div>
 
-            {project.sections.map((section) => (
+            {project.sections.map((section: ProjectSection) => (
               <section key={section.title} className="space-y-4">
                 <h2 className="text-lg font-semibold text-[#0a1b4d]">{section.title}</h2>
                 <Placeholder label={section.title} ratio={section.ratio} />

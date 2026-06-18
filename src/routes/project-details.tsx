@@ -77,10 +77,10 @@ function ProjectDetailsPage() {
             {/* Project navigation */}
             <div className="mt-10 flex items-center justify-between text-2xl font-light">
               <Link to="/project-details" aria-label="Next project">
-                {"<<"}
+                <ChevronLeft size={28} strokeWidth={1.5} />
               </Link>
               <Link to="/project-details" aria-label="Previous project">
-                {">>"}
+                <ChevronRight size={28} strokeWidth={1.5} />
               </Link>
             </div>
           </aside>

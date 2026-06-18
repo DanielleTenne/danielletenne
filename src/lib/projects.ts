@@ -69,6 +69,7 @@ export const projects: Project[] = [
   },
   {
     slug: "kai-lighters",
+    route: "/kai-lighters",
     title: "Kai Lighters",
     image: kaiAsset.url,
     description:
@@ -82,6 +83,7 @@ export const projects: Project[] = [
   },
   {
     slug: "sticker-pack",
+    route: "/kai-ai",
     title: "Sticker Pack",
     image: stickerAsset.url,
     description:
@@ -94,6 +96,7 @@ export const projects: Project[] = [
   },
   {
     slug: "n-brand-mark",
+    route: "/n-bakery",
     title: "N Brand Mark",
     image: nBrandAsset.url,
     description:
@@ -106,6 +109,7 @@ export const projects: Project[] = [
   },
   {
     slug: "cobwebs-technologies",
+    route: "/cobwebs",
     title: "Cobwebs Technologies",
     image: cobwebsAsset.url,
     description:
@@ -118,6 +122,7 @@ export const projects: Project[] = [
   },
   {
     slug: "little-wine-bar",
+    route: "/little-wine-bar",
     title: "Little Wine Bar",
     image: wineAsset.url,
     description:

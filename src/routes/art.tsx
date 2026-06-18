@@ -1,6 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import coverPagmar from "../assets/art/cover-pagmar-2.gif.asset.json";
+import easternPulse from "../assets/art/eastern-pulse-2.jpeg.asset.json";
+import ayalev1 from "../assets/art/ayalev-1.gif.asset.json";
+import ayalev2 from "../assets/art/ayalev-2.gif.asset.json";
+import ayalev3 from "../assets/art/ayalev-3-2.gif.asset.json";
 
 export const Route = createFileRoute("/art")({
   head: () => ({
@@ -16,41 +21,44 @@ export const Route = createFileRoute("/art")({
 
 type Piece = {
   title: string;
-  ratio: string; // tailwind aspect class
-  gradient: string;
+  ratio: string;
+  src?: string;
+  gradient?: string;
 };
 
 const leftColumn: Piece[] = [
-  { title: "Mandala Keys", ratio: "aspect-[4/3]", gradient: "from-yellow-300 via-emerald-300 to-amber-500" },
-  { title: "Night Kitchen", ratio: "aspect-[16/9]", gradient: "from-slate-700 via-slate-800 to-slate-900" },
+  { title: "Pagmar", ratio: "aspect-[16/9]", src: coverPagmar.url },
+  { title: "I Love Haifa — Houses", ratio: "aspect-[16/9]", src: ayalev1.url },
+  { title: "I Love Haifa — City", ratio: "aspect-[16/9]", src: ayalev3.url },
   { title: "Hallway", ratio: "aspect-[4/5]", gradient: "from-slate-800 via-zinc-800 to-neutral-900" },
-  { title: "I Love Haifa", ratio: "aspect-[4/3]", gradient: "from-stone-900 via-stone-800 to-stone-900" },
   { title: "Heartbird", ratio: "aspect-[16/10]", gradient: "from-stone-400 via-stone-500 to-stone-600" },
   { title: "Floating", ratio: "aspect-[16/9]", gradient: "from-emerald-200 via-teal-300 to-amber-200" },
   { title: "Starlit", ratio: "aspect-[16/10]", gradient: "from-indigo-900 via-blue-900 to-slate-900" },
-  { title: "Dream City", ratio: "aspect-[16/10]", gradient: "from-indigo-950 via-purple-900 to-slate-900" },
-  { title: "Paper", ratio: "aspect-[16/10]", gradient: "from-stone-100 via-stone-200 to-stone-300" },
 ];
 
 const rightColumn: Piece[] = [
-  { title: "Pantry", ratio: "aspect-[4/3]", gradient: "from-amber-700 via-orange-300 to-yellow-200" },
-  { title: "Desk Smoke", ratio: "aspect-[16/9]", gradient: "from-zinc-700 via-zinc-800 to-zinc-900" },
-  { title: "Eastern Pulse", ratio: "aspect-[4/5]", gradient: "from-amber-200 via-stone-300 to-stone-500" },
+  { title: "Eastern Pulse", ratio: "aspect-square", src: easternPulse.url },
+  { title: "I Love Haifa — Kitchen", ratio: "aspect-[16/9]", src: ayalev2.url },
   { title: "Hands & Box", ratio: "aspect-[4/3]", gradient: "from-rose-300 via-rose-400 to-rose-700" },
   { title: "Portrait Doll", ratio: "aspect-[4/5]", gradient: "from-rose-200 via-pink-300 to-violet-400" },
   { title: "Brick Bird", ratio: "aspect-[16/10]", gradient: "from-neutral-700 via-neutral-800 to-neutral-900" },
   { title: "Floating Notes", ratio: "aspect-[16/10]", gradient: "from-indigo-800 via-blue-900 to-slate-900" },
-  { title: "Glow Plant", ratio: "aspect-[16/9]", gradient: "from-stone-900 via-stone-800 to-stone-900" },
   { title: "Anchors", ratio: "aspect-[3/4]", gradient: "from-stone-300 via-stone-400 to-stone-600" },
 ];
 
 function Tile({ piece }: { piece: Piece }) {
   return (
     <div className={`group relative ${piece.ratio} w-full overflow-hidden rounded-sm`}>
-      <div className={`absolute inset-0 bg-gradient-to-br ${piece.gradient}`} />
-      <span className="pointer-events-none absolute inset-0 flex items-center justify-center text-xs uppercase tracking-widest text-white/70">
-        {piece.title}
-      </span>
+      {piece.src ? (
+        <img src={piece.src} alt={piece.title} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+      ) : (
+        <>
+          <div className={`absolute inset-0 bg-gradient-to-br ${piece.gradient}`} />
+          <span className="pointer-events-none absolute inset-0 flex items-center justify-center text-xs uppercase tracking-widest text-white/70">
+            {piece.title}
+          </span>
+        </>
+      )}
       <span className="pointer-events-none absolute inset-0 bg-[#020E3C]/50 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
     </div>
   );

@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ProjectDetailsRouteImport } from './routes/project-details'
+import { Route as PenlinkRouteImport } from './routes/penlink'
 import { Route as NBakeryRouteImport } from './routes/n-bakery'
 import { Route as LittleWineBarRouteImport } from './routes/little-wine-bar'
 import { Route as KaiLightersRouteImport } from './routes/kai-lighters'
@@ -25,6 +26,11 @@ import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
 const ProjectDetailsRoute = ProjectDetailsRouteImport.update({
   id: '/project-details',
   path: '/project-details',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PenlinkRoute = PenlinkRouteImport.update({
+  id: '/penlink',
+  path: '/penlink',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NBakeryRoute = NBakeryRouteImport.update({
@@ -94,6 +100,7 @@ export interface FileRoutesByFullPath {
   '/kai-lighters': typeof KaiLightersRoute
   '/little-wine-bar': typeof LittleWineBarRoute
   '/n-bakery': typeof NBakeryRoute
+  '/penlink': typeof PenlinkRoute
   '/project-details': typeof ProjectDetailsRoute
   '/projects/$slug': typeof ProjectsSlugRoute
 }
@@ -108,6 +115,7 @@ export interface FileRoutesByTo {
   '/kai-lighters': typeof KaiLightersRoute
   '/little-wine-bar': typeof LittleWineBarRoute
   '/n-bakery': typeof NBakeryRoute
+  '/penlink': typeof PenlinkRoute
   '/project-details': typeof ProjectDetailsRoute
   '/projects/$slug': typeof ProjectsSlugRoute
 }
@@ -123,6 +131,7 @@ export interface FileRoutesById {
   '/kai-lighters': typeof KaiLightersRoute
   '/little-wine-bar': typeof LittleWineBarRoute
   '/n-bakery': typeof NBakeryRoute
+  '/penlink': typeof PenlinkRoute
   '/project-details': typeof ProjectDetailsRoute
   '/projects/$slug': typeof ProjectsSlugRoute
 }
@@ -139,6 +148,7 @@ export interface FileRouteTypes {
     | '/kai-lighters'
     | '/little-wine-bar'
     | '/n-bakery'
+    | '/penlink'
     | '/project-details'
     | '/projects/$slug'
   fileRoutesByTo: FileRoutesByTo
@@ -153,6 +163,7 @@ export interface FileRouteTypes {
     | '/kai-lighters'
     | '/little-wine-bar'
     | '/n-bakery'
+    | '/penlink'
     | '/project-details'
     | '/projects/$slug'
   id:
@@ -167,6 +178,7 @@ export interface FileRouteTypes {
     | '/kai-lighters'
     | '/little-wine-bar'
     | '/n-bakery'
+    | '/penlink'
     | '/project-details'
     | '/projects/$slug'
   fileRoutesById: FileRoutesById
@@ -182,6 +194,7 @@ export interface RootRouteChildren {
   KaiLightersRoute: typeof KaiLightersRoute
   LittleWineBarRoute: typeof LittleWineBarRoute
   NBakeryRoute: typeof NBakeryRoute
+  PenlinkRoute: typeof PenlinkRoute
   ProjectDetailsRoute: typeof ProjectDetailsRoute
   ProjectsSlugRoute: typeof ProjectsSlugRoute
 }
@@ -193,6 +206,13 @@ declare module '@tanstack/react-router' {
       path: '/project-details'
       fullPath: '/project-details'
       preLoaderRoute: typeof ProjectDetailsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/penlink': {
+      id: '/penlink'
+      path: '/penlink'
+      fullPath: '/penlink'
+      preLoaderRoute: typeof PenlinkRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/n-bakery': {
@@ -286,6 +306,7 @@ const rootRouteChildren: RootRouteChildren = {
   KaiLightersRoute: KaiLightersRoute,
   LittleWineBarRoute: LittleWineBarRoute,
   NBakeryRoute: NBakeryRoute,
+  PenlinkRoute: PenlinkRoute,
   ProjectDetailsRoute: ProjectDetailsRoute,
   ProjectsSlugRoute: ProjectsSlugRoute,
 }

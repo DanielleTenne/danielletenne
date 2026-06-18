@@ -131,8 +131,7 @@ function Index() {
           {projects.map((p) => (
             <Link
               key={p.slug}
-              to="/projects/$slug"
-              params={{ slug: p.slug }}
+              to={p.route as any}
               className="group relative mb-6 block break-inside-avoid overflow-hidden rounded-sm"
               aria-label={p.title}
             >

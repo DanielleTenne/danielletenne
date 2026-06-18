@@ -16,6 +16,7 @@ export type ProjectSection = {
 
 export type Project = {
   slug: string;
+  route: string;
   title: string;
   image: string;
   description: string;
@@ -26,6 +27,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "penlink-ui-system",
+    route: "/penlink",
     title: "Penlink",
     image: penlinkAsset.url,
     description:
@@ -40,6 +42,7 @@ export const projects: Project[] = [
   },
   {
     slug: "taco-revolution",
+    route: "/chicano",
     title: "Taco Revolution",
     image: tacoAsset.url,
     description:
@@ -53,6 +56,7 @@ export const projects: Project[] = [
   },
   {
     slug: "insights-building",
+    route: "/insaights",
     title: "Insights",
     image: insightsAsset.url,
     description:
@@ -65,6 +69,7 @@ export const projects: Project[] = [
   },
   {
     slug: "kai-lighters",
+    route: "/kai-lighters",
     title: "Kai Lighters",
     image: kaiAsset.url,
     description:
@@ -78,6 +83,7 @@ export const projects: Project[] = [
   },
   {
     slug: "sticker-pack",
+    route: "/kai-ai",
     title: "Sticker Pack",
     image: stickerAsset.url,
     description:
@@ -90,6 +96,7 @@ export const projects: Project[] = [
   },
   {
     slug: "n-brand-mark",
+    route: "/n-bakery",
     title: "N Brand Mark",
     image: nBrandAsset.url,
     description:
@@ -102,6 +109,7 @@ export const projects: Project[] = [
   },
   {
     slug: "cobwebs-technologies",
+    route: "/cobwebs",
     title: "Cobwebs Technologies",
     image: cobwebsAsset.url,
     description:
@@ -114,6 +122,7 @@ export const projects: Project[] = [
   },
   {
     slug: "little-wine-bar",
+    route: "/little-wine-bar",
     title: "Little Wine Bar",
     image: wineAsset.url,
     description:

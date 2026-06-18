@@ -21,8 +21,7 @@ export function Header() {
           <Link to="/about" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }}>About</Link>
         </nav>
         <div className="hidden gap-4 text-xs md:flex">
-          <a href="#" className="hover:opacity-60">Instagram</a>
-          <a href="#" className="hover:opacity-60">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/danielle-tenne/" target="_blank" rel="noopener noreferrer" className="hover:opacity-60">LinkedIn</a>
         </div>
 
         {/* Mobile hamburger */}
@@ -46,8 +45,7 @@ export function Header() {
             <Link to="/about" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }} onClick={() => setMenuOpen(false)}>About</Link>
           </nav>
           <div className="mt-4 flex flex-col gap-3 text-xs">
-            <a href="#" className="hover:opacity-60">Instagram</a>
-            <a href="#" className="hover:opacity-60">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/danielle-tenne/" target="_blank" rel="noopener noreferrer" className="hover:opacity-60">LinkedIn</a>
           </div>
         </div>
       )}

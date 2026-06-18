@@ -116,33 +116,24 @@ function Index() {
       </section>
 
       {/* Art Playground */}
-      <section id="art" className="bg-[#f3f3f1] py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="mb-12 text-center text-4xl font-extrabold leading-tight text-stone-800 md:text-5xl">
-            Art<br />Playground
-          </h2>
+      <section id="art" className="w-full overflow-x-hidden bg-[#f3f3f1] py-24">
+        <h2 className="mb-16 text-center text-5xl font-extrabold leading-tight text-stone-800 md:text-7xl">
+          Art<br />Playground
+        </h2>
 
-          {[artRow1, artRow2, artRow3].map((row, i) => (
-            <div key={i} className="mb-6 grid grid-cols-2 gap-4 md:grid-cols-12">
-              {row.map((item) => (
-                <div
-                  key={item.title}
-                  className={`${item.bg} ${item.w} flex h-40 items-center justify-center rounded-sm text-sm text-stone-600 md:h-48`}
-                >
-                  {item.title}
-                </div>
-              ))}
-            </div>
-          ))}
+        <div className="space-y-6">
+          <MarqueeRow images={artRow1} direction="right" />
+          <MarqueeRow images={artRow2} direction="left" />
+          <MarqueeRow images={artRow3} direction="right" />
+        </div>
 
-          <div className="mt-12 flex justify-center">
-            <a
-              href="#"
-              className="border border-[#0a1b4d] px-6 py-2 text-xs text-[#0a1b4d] hover:bg-[#0a1b4d] hover:text-white"
-            >
-              View Projects →
-            </a>
-          </div>
+        <div className="mt-16 flex justify-center">
+          <Link
+            to="/art"
+            className="border border-[#0a1b4d] px-6 py-2 text-xs text-[#0a1b4d] hover:bg-[#0a1b4d] hover:text-white"
+          >
+            View Projects →
+          </Link>
         </div>
       </section>
 

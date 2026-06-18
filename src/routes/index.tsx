@@ -11,6 +11,8 @@ import artAnchors from "@/assets/art/anchors.jpg.asset.json";
 import artNight from "@/assets/art/halayla-haze.gif.asset.json";
 import artShay1 from "@/assets/art/shayachli-1.gif.asset.json";
 import artShay4 from "@/assets/art/shayachli-4.gif.asset.json";
+import artHaze3 from "@/assets/art/halayla-haze-3.gif.asset.json";
+import artPagmar5 from "@/assets/art/pagmar-5.gif.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({

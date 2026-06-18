@@ -24,30 +24,20 @@ function AboutPage() {
       <section className="px-10 pt-16 pb-24 md:px-[120px] md:pt-24 md:pb-32">
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2">
           <div>
-            <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl lg:text-[3.5rem]">
+            <h1 className="text-3xl font-extrabold leading-[1.15] tracking-tight md:text-[2.25rem] lg:text-[2.5rem]">
               I'm Danielle Tenne,<br />
               visual and marketing designer,<br />
               based in Herzliya, Israel.
             </h1>
-            <div className="mt-8 space-y-6 text-sm leading-relaxed text-[#0a1b4d]">
-              <p>
-                I'm a multidisciplinary designer, a creative problem-solver,
-              </p>
-              <p>
-                with a background in illustration and motion design.
-              </p>
-              <p>
-                I graduated as a Visual Communication Designer in July 2021.
-              </p>
-              <p>
-                I love visual storytelling, and especially enjoy bringing creative concepts to life,
-              </p>
-              <p>
-                from the idea to the final touch.
-              </p>
+            <div className="mt-6 text-sm leading-[1.5] text-[#0a1b4d]">
+              <p>I'm a multidisciplinary designer, a creative problem-solver,</p>
+              <p>with a background in illustration and motion design.</p>
+              <p>I graduated as a Visual Communication Designer in July 2021.</p>
+              <p>I love visual storytelling, and especially enjoy bringing creative concepts to life,</p>
+              <p>from the idea to the final touch.</p>
             </div>
-            <div className="mt-8">
-              <p className="text-lg font-bold">Let's talk!</p>
+            <div className="mt-6">
+              <p className="text-base font-extrabold">Let's talk!</p>
               <a
                 href="mailto:tenne.dani@gmail.com"
                 className="mt-1 inline-block text-sm text-[#2563eb] underline hover:opacity-80"

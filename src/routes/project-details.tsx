@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ProjectMetadataTags } from "@/components/ProjectMetadataTags";
 
 export const Route = createFileRoute("/project-details")({
   head: () => ({

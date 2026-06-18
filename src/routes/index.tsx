@@ -3,6 +3,10 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { projects } from "@/lib/projects";
 import portraitAsset from "@/assets/portrait.gif.asset.json";
+import artCover from "@/assets/art/cover-pagmar.gif.asset.json";
+import artEastern from "@/assets/art/eastern-pulse.jpeg.asset.json";
+import artHaifa from "@/assets/art/i-love-haifa.gif.asset.json";
+import artAnchors from "@/assets/art/anchors.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -17,26 +21,38 @@ export const Route = createFileRoute("/")({
 });
 
 
-const artRow1 = [
-  { title: "Garden Keys", bg: "bg-emerald-100", w: "md:col-span-3" },
-  { title: "Eastern Pulse", bg: "bg-amber-50", w: "md:col-span-3" },
-  { title: "Portrait Study", bg: "bg-stone-200", w: "md:col-span-3" },
-  { title: "Night Sky", bg: "bg-slate-700", w: "md:col-span-3" },
+type ArtImage = { src: string; alt: string };
+
+const artImages: ArtImage[] = [
+  { src: artCover.url, alt: "Cover artwork" },
+  { src: artEastern.url, alt: "Eastern Pulse" },
+  { src: artHaifa.url, alt: "I Love Haifa" },
+  { src: artAnchors.url, alt: "Anchors" },
 ];
 
-const artRow2 = [
-  { title: "Black Trees", bg: "bg-gray-100", w: "md:col-span-3" },
-  { title: "Jars on Shelf", bg: "bg-yellow-200", w: "md:col-span-3" },
-  { title: "Anchors", bg: "bg-stone-100", w: "md:col-span-3" },
-  { title: "Shadow", bg: "bg-slate-900", w: "md:col-span-3" },
-];
+const artRow1: ArtImage[] = [artImages[0], artImages[1], artImages[2], artImages[3], artImages[1]];
+const artRow2: ArtImage[] = [artImages[2], artImages[3], artImages[0], artImages[1], artImages[2]];
+const artRow3: ArtImage[] = [artImages[3], artImages[0], artImages[1], artImages[2], artImages[0]];
 
-const artRow3 = [
-  { title: "Hearts", bg: "bg-stone-300", w: "md:col-span-3" },
-  { title: "Stone Wall", bg: "bg-zinc-400", w: "md:col-span-3" },
-  { title: "Bricks", bg: "bg-rose-200", w: "md:col-span-3" },
-  { title: "Flow", bg: "bg-teal-300", w: "md:col-span-3" },
-];
+function MarqueeRow({ images, direction }: { images: ArtImage[]; direction: "left" | "right" }) {
+  const animClass = direction === "left" ? "animate-marquee-left" : "animate-marquee-right";
+  const loop = [...images, ...images];
+  return (
+    <div className="overflow-hidden">
+      <div className={`flex w-max gap-6 ${animClass}`}>
+        {loop.map((img, idx) => (
+          <img
+            key={idx}
+            src={img.src}
+            alt={img.alt}
+            className="h-56 w-auto shrink-0 rounded-sm object-cover md:h-72 lg:h-80"
+            loading="lazy"
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function Index() {
   return (
@@ -100,33 +116,24 @@ function Index() {
       </section>
 
       {/* Art Playground */}
-      <section id="art" className="bg-[#f3f3f1] py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="mb-12 text-center text-4xl font-extrabold leading-tight text-stone-800 md:text-5xl">
-            Art<br />Playground
-          </h2>
+      <section id="art" className="w-full overflow-x-hidden bg-[#f3f3f1] py-24">
+        <h2 className="mb-16 text-center text-5xl font-extrabold leading-tight text-stone-800 md:text-7xl">
+          Art<br />Playground
+        </h2>
 
-          {[artRow1, artRow2, artRow3].map((row, i) => (
-            <div key={i} className="mb-6 grid grid-cols-2 gap-4 md:grid-cols-12">
-              {row.map((item) => (
-                <div
-                  key={item.title}
-                  className={`${item.bg} ${item.w} flex h-40 items-center justify-center rounded-sm text-sm text-stone-600 md:h-48`}
-                >
-                  {item.title}
-                </div>
-              ))}
-            </div>
-          ))}
+        <div className="space-y-6">
+          <MarqueeRow images={artRow1} direction="right" />
+          <MarqueeRow images={artRow2} direction="left" />
+          <MarqueeRow images={artRow3} direction="right" />
+        </div>
 
-          <div className="mt-12 flex justify-center">
-            <a
-              href="#"
-              className="border border-[#0a1b4d] px-6 py-2 text-xs text-[#0a1b4d] hover:bg-[#0a1b4d] hover:text-white"
-            >
-              View Projects →
-            </a>
-          </div>
+        <div className="mt-16 flex justify-center">
+          <Link
+            to="/art"
+            className="border border-[#0a1b4d] px-6 py-2 text-xs text-[#0a1b4d] hover:bg-[#0a1b4d] hover:text-white"
+          >
+            View Projects →
+          </Link>
         </div>
       </section>
 

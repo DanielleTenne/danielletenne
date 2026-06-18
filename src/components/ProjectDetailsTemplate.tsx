@@ -32,7 +32,7 @@ export function ProjectDetailsTemplate({
               ← Back
             </Link>
 
-            <h1 className="mt-6 text-5xl font-light tracking-tight text-[#0a1b4d] md:text-6xl">
+            <h1 className="mt-6 text-[40px] font-light leading-[1.1] tracking-tight text-[#0a1b4d] md:text-[50px]">
               {title}
             </h1>
 

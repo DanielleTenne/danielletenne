@@ -14,7 +14,7 @@ export function ProjectMetadataTags() {
       {tags.map((tag) => (
         <span
           key={tag}
-          className="rounded-sm border border-accent/20 bg-accent/5 px-3 py-1 text-sm font-medium text-foreground"
+          className="rounded-sm border border-border bg-accent/5 px-3 py-1 text-sm font-medium text-foreground"
         >
           {tag}
         </span>

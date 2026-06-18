@@ -60,7 +60,7 @@ function ArtPage() {
   return (
     <div className="min-h-screen bg-[#f3f3f1]">
       <Header />
-      <main className="mx-auto max-w-6xl px-6 py-16">
+      <main className="px-10 py-16 md:px-[120px]">
         <h1 className="mb-12 text-4xl font-extrabold leading-tight text-stone-800 md:text-5xl">
           Art<br />playground
         </h1>
@@ -80,7 +80,7 @@ function ArtPage() {
       </main>
 
       <section className="bg-[#0a1b4d] py-24 text-white">
-        <div className="mx-auto max-w-7xl px-6 text-center">
+        <div className="px-10 text-center md:px-[120px]">
           <h2 className="mb-6 text-4xl font-extrabold md:text-5xl">Contact me</h2>
           <a href="mailto:hello@example.com" className="text-sm text-sky-300 hover:underline">
             hello@example.com →

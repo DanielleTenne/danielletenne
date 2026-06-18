@@ -21,7 +21,7 @@ function AboutPage() {
       <Header />
 
       {/* Bio */}
-      <section className="mx-auto max-w-7xl px-6 pt-16 pb-24 md:pt-24 md:pb-32">
+      <section className="px-10 pt-16 pb-24 md:px-[120px] md:pt-24 md:pb-32">
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2">
           <div>
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl lg:text-[3.5rem]">
@@ -69,7 +69,7 @@ function AboutPage() {
 
       {/* Contact me */}
       <section className="bg-[#0a1b4d] py-24 text-white">
-        <div className="mx-auto max-w-7xl px-6 text-center">
+        <div className="px-10 text-center md:px-[120px]">
           <h2 className="mb-6 text-5xl font-extrabold leading-tight md:text-6xl lg:text-7xl">
             Contact me
           </h2>

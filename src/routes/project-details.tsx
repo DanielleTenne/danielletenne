@@ -65,7 +65,7 @@ function ProjectDetailsPage() {
     <div className="min-h-screen bg-white text-[#0a1b4d]">
       <Header />
 
-      <main className="mx-auto max-w-7xl px-4 sm:px-6">
+      <main className="px-10 md:px-[120px]">
         <div className="grid grid-cols-1 gap-12 pt-24 pb-12 md:grid-cols-12">
           {/* LEFT — sticky metadata */}
           <aside className="md:col-span-4 md:sticky md:top-28 self-start h-fit">

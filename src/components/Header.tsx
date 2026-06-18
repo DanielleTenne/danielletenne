@@ -9,7 +9,7 @@ export function Header() {
 
   return (
     <header className="border-b border-transparent">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+      <div className="flex items-center justify-between px-10 py-5 md:px-[120px]">
         <Link to="/">
           <img src={logoAsset.url} alt="Danielle Tenne" className="h-8 w-auto" />
         </Link>
@@ -39,7 +39,7 @@ export function Header() {
 
       {/* Mobile menu panel */}
       {menuOpen && (
-        <div className="border-t border-border px-6 pb-6 pt-4 md:hidden">
+        <div className="border-t border-border px-10 pb-6 pt-4 md:hidden">
           <nav className="flex flex-col gap-4 text-xs text-[#0a1b4d]">
             <Link to="/" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }} onClick={() => setMenuOpen(false)}>Home</Link>
             <Link to="/" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }} onClick={() => setMenuOpen(false)}>Art</Link>

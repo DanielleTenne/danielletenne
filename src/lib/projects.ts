@@ -56,6 +56,7 @@ export const projects: Project[] = [
   },
   {
     slug: "insights-building",
+    route: "/insaights",
     title: "Insights",
     image: insightsAsset.url,
     description:

@@ -7,7 +7,7 @@ export function Footer() {
         <p className="opacity-70">© 2025 Danielle Tenne</p>
         <nav className="flex gap-6">
           <Link to="/" className="hover:opacity-70">Home</Link>
-          <Link to="/" className="hover:opacity-70">Art</Link>
+          <Link to="/art" className="hover:opacity-70">Art</Link>
           <Link to="/about" className="hover:opacity-70">About</Link>
         </nav>
         <div className="flex flex-col items-end gap-1">

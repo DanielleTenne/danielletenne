@@ -35,4 +35,5 @@ export const Route = createFileRoute("/little-wine-bar")({
       description={DESC}
       images={IMAGES}
     />
+  ),
 });

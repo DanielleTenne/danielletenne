@@ -14,7 +14,7 @@ export function ProjectMetadataTags({ tags = DEFAULT_TAGS }: { tags?: string[] }
       {tags.map((tag) => (
         <span
           key={tag}
-          className="rounded-sm border border-border bg-accent/5 px-3 py-1 text-sm font-medium text-foreground"
+          className="rounded-none border-[0.5px] border-[#D7D7D1] bg-transparent px-3 py-1 text-sm font-medium text-[#696965]"
         >
           {tag}
         </span>

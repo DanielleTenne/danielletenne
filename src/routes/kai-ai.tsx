@@ -3,6 +3,7 @@ import { ProjectDetailsTemplate } from "@/components/ProjectDetailsTemplate";
 import social from "@/assets/work/kai-social.jpg.asset.json";
 import stickers from "@/assets/work/kai-stickers.jpg.asset.json";
 import miniLogos from "@/assets/work/kai-mini-logos.jpg.asset.json";
+import breathingGif from "@/assets/work/kai-breathing.gif.asset.json";
 import sleepGif from "@/assets/work/kai-sleep.gif.asset.json";
 import gratitudeGif from "@/assets/work/kai-gratitude.gif.asset.json";
 import productAssets from "@/assets/work/kai-product-assets.jpg.asset.json";

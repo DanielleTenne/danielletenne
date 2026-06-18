@@ -23,7 +23,24 @@ export type Project = {
   sections: ProjectSection[];
 };
 
-const projectsOrdered: Project[] = [
+const projectDefs: Record<string, Project> = Object.fromEntries(([
+  {
+    slug: "penlink-ui-system",
+    title: "Penlink",
+    image: penlinkAsset.url,
+    description:
+      "Designed a wide range of brand and marketing assets, including presentations, web pages, social media visuals, wall graphics, and printed materials.",
+    tags: ["Brand identity", "Design systems", "Web design", "Print", "Presentations"],
+    sections: [
+      { title: "Brand book", ratio: "aspect-[16/10]", body: "Established a comprehensive visual identity covering color systems, typography hierarchy, logo applications, and brand voice." },
+      { title: "Presentations", ratio: "aspect-[16/10]", body: "Built a modular slide library used across sales, conferences, and internal communications." },
+      { title: "Printable", ratio: "aspect-[16/9]" },
+      { title: "Exhibition Booth Design", ratio: "aspect-[16/10]", body: "Designed a full exhibition booth experience translating the digital brand into a physical environment." },
+    ],
+  },
+] as Project[]).map((p) => [p.slug, p]));
+
+export const projects: Project[] = [
   {
     slug: "penlink-ui-system",
     title: "Penlink",

@@ -149,3 +149,61 @@ function Index() {
     </div>
   );
 }
+
+function ArtPlayground() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [progress, setProgress] = useState(0.5);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const rect = el.getBoundingClientRect();
+      const vh = window.innerHeight || 1;
+      // 0 when section bottom hits viewport top, 1 when section top hits viewport bottom.
+      const total = rect.height + vh;
+      const p = 1 - (rect.bottom) / total;
+      setProgress(Math.max(0, Math.min(1, p)));
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
+
+  return (
+    <section
+      id="art"
+      ref={sectionRef}
+      className="w-full overflow-x-hidden bg-[#f3f3f1] py-24"
+    >
+      <h2 className="mb-16 text-center text-5xl font-extrabold leading-tight text-stone-800 md:text-7xl">
+        Art<br />Playground
+      </h2>
+
+      <div className="space-y-6">
+        <ScrollRow images={artRow1} direction="right" progress={progress} />
+        <ScrollRow images={artRow2} direction="left" progress={progress} />
+        <ScrollRow images={artRow3} direction="right" progress={progress} />
+      </div>
+
+      <div className="mt-16 flex justify-center">
+        <Link
+          to="/art"
+          className="border border-[#0a1b4d] px-6 py-2 text-xs text-[#0a1b4d] hover:bg-[#0a1b4d] hover:text-white"
+        >
+          View Projects →
+        </Link>
+      </div>
+    </section>
+  );
+}

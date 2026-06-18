@@ -3,7 +3,16 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProjectMetadataTags } from "@/components/ProjectMetadataTags";
 import presentationsAsset from "@/assets/work/penlink-presentations.jpg.asset.json";
-
+import img1 from "@/assets/work/pd-penlink.jpg.asset.json";
+import img2 from "@/assets/work/pd-pd-2.jpg.asset.json";
+import img3 from "@/assets/work/pd-pd-3.jpg.asset.json";
+import img4 from "@/assets/work/pd-pd-4.jpg.asset.json";
+import img7 from "@/assets/work/pd-pd-7.jpg.asset.json";
+import img8 from "@/assets/work/pd-pd-8.jpg.asset.json";
+import img9 from "@/assets/work/pd-pd-9.jpg.asset.json";
+import img10 from "@/assets/work/pd-pd-10.jpg.asset.json";
+import img15 from "@/assets/work/pd-pd-15.jpg.asset.json";
+import img16 from "@/assets/work/pd-pd-16.jpg.asset.json";
 
 export const Route = createFileRoute("/project-details")({
   head: () => ({
@@ -35,48 +44,22 @@ export const Route = createFileRoute("/project-details")({
   component: ProjectDetailsPage,
 });
 
-function Placeholder({ label, ratio = "aspect-[4/3]" }: { label: string; ratio?: string }) {
-  return (
-    <div
-      className={`${ratio} w-full overflow-hidden rounded-sm bg-gradient-to-br from-[#eaf0fb] via-[#dde6f7] to-[#c8d4ee] flex items-center justify-center text-[#0a1b4d]/40 text-xs tracking-widest uppercase`}
-    >
-      {label}
-    </div>
-  );
-}
-
-function Section({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section className="space-y-4">
-      <h2 className="text-lg font-semibold text-[#0a1b4d]">{title}</h2>
-      {children}
-    </section>
-  );
-}
+const IMAGES = [img1, img2, img3, img4, presentationsAsset, img7, img8, img9, img10, img15, img16];
 
 function ProjectDetailsPage() {
   return (
-    <div className="min-h-screen bg-white text-[#0a1b4d]">
+    <div className="min-h-screen bg-white text-[#0a1b4d] [&_a]:text-[#757575] [&_a:hover]:text-[#4D72FA] [&_button]:text-[#757575] [&_button:hover]:text-[#4D72FA]">
       <Header />
 
       <main className="px-10 md:px-[120px]">
         <div className="grid grid-cols-1 gap-12 pt-24 pb-12 md:grid-cols-12">
           {/* LEFT — sticky metadata */}
           <aside className="md:col-span-4 md:sticky md:top-28 self-start h-fit">
-            <Link
-              to="/"
-              className="text-xs text-[#0a1b4d]/60 hover:opacity-60"
-            >
+            <Link to="/" className="text-xs">
               ← Back
             </Link>
 
-            <h1 className="mt-6 text-5xl font-light tracking-tight md:text-6xl">
+            <h1 className="mt-6 text-5xl font-light tracking-tight text-[#0a1b4d] md:text-6xl">
               Penlink
             </h1>
 
@@ -90,71 +73,27 @@ function ProjectDetailsPage() {
               and printed materials.
             </p>
 
+            {/* Project navigation */}
+            <div className="mt-10 flex items-center justify-between text-2xl font-light">
+              <Link to="/project-details" aria-label="Next project">
+                {"<<"}
+              </Link>
+              <Link to="/project-details" aria-label="Previous project">
+                {">>"}
+              </Link>
+            </div>
           </aside>
 
-          {/* RIGHT — scrollable content */}
-          <div className="space-y-16 md:col-span-8">
-            <Section title="Brand book">
-              <Placeholder label="Brand book cover" ratio="aspect-[16/10]" />
-              <div className="grid grid-cols-3 gap-3">
-                <Placeholder label="Palette" ratio="aspect-square" />
-                <Placeholder label="Type" ratio="aspect-square" />
-                <Placeholder label="Logo" ratio="aspect-square" />
-              </div>
-              <p className="text-sm leading-relaxed text-[#0a1b4d]/80">
-                Established a comprehensive visual identity covering color
-                systems, typography hierarchy, logo applications, and brand
-                voice — providing a flexible foundation across digital and
-                print touchpoints.
-              </p>
-            </Section>
-
-            <Section title="Presentations">
+          {/* RIGHT — images only */}
+          <div className="space-y-6 md:col-span-8">
+            {IMAGES.map((asset, idx) => (
               <img
-                src={presentationsAsset.url}
-                alt="PenLink presentation slide deck showcasing AI-powered OSINT platform layouts"
-                className="w-full rounded-sm"
+                key={idx}
+                src={asset.url}
+                alt=""
+                className="w-full rounded-none border-[0.5px] border-[#D7D7D1]"
               />
-              <p className="text-sm leading-relaxed text-[#0a1b4d]/80">
-                Built a modular slide library used across sales, conferences,
-                and internal communications. Each layout balances dense
-                information with clear, branded visual rhythm.
-              </p>
-            </Section>
-
-
-            <Section title="Printable">
-              <Placeholder label="Brochure spread" ratio="aspect-[16/9]" />
-            </Section>
-
-            <Section title="Pages">
-              <Placeholder label="One-pagers" ratio="aspect-[4/3]" />
-              <p className="text-sm leading-relaxed text-[#0a1b4d]/80">
-                A consistent typographic system across product one-pagers
-                made it easy for the team to spin up new pieces without
-                breaking visual cohesion.
-              </p>
-            </Section>
-
-            <Section title="Booth design">
-              <Placeholder label="Booth render" ratio="aspect-[16/10]" />
-            </Section>
-
-            <Section title="Exhibition Booth Design">
-              <Placeholder label="Booth on-site" ratio="aspect-[16/10]" />
-              <p className="text-sm leading-relaxed text-[#0a1b4d]/80">
-                Designed a full exhibition booth experience — from large-scale
-                wall graphics to printed handouts — translating the digital
-                brand into a physical environment.
-              </p>
-            </Section>
-
-            <Section title="Giveaways">
-              <div className="grid grid-cols-2 gap-4">
-                <Placeholder label="Socks" ratio="aspect-square" />
-                <Placeholder label="Coaster" ratio="aspect-square" />
-              </div>
-            </Section>
+            ))}
           </div>
         </div>
       </main>
@@ -164,7 +103,7 @@ function ProjectDetailsPage() {
         <h2 className="text-5xl font-bold md:text-6xl">Contact me</h2>
         <a
           href="mailto:tenne.danielle@gmail.com"
-          className="mt-6 inline-block text-sm text-[#7fa8ff] underline underline-offset-4 hover:opacity-80"
+          className="mt-6 inline-block text-sm underline underline-offset-4"
         >
           tenne.danielle@gmail.com
         </a>

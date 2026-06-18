@@ -156,10 +156,10 @@ function Index() {
         <div className="px-10 text-center md:px-[120px]">
           <h2 className="mb-6 text-4xl font-extrabold md:text-5xl">Contact me</h2>
           <a
-            href="mailto:hello@example.com"
+            href="mailto:tenne.dani@gmail.com"
             className="text-sm text-sky-300 hover:underline"
           >
-            hello@example.com →
+            tenne.dani@gmail.com →
           </a>
         </div>
       </section>

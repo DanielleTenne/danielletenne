@@ -9,8 +9,8 @@ export function Header() {
   return (
     <header className="border-b border-transparent">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <Link to="/" className="text-[11px] font-bold leading-tight tracking-wide">
-          DANIELLE<br />TENNE
+        <Link to="/">
+          <img src="/src/assets/logo.svg" alt="Danielle Tenne" className="h-8 w-auto" />
         </Link>
 
         {/* Desktop nav */}

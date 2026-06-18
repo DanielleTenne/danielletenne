@@ -49,23 +49,7 @@ const artRow3 = [
 function Index() {
   return (
     <div className="min-h-screen bg-white font-sans text-[#0a1b4d]">
-      {/* Header */}
-      <header className="border-b border-transparent">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <div className="text-[11px] font-bold leading-tight tracking-wide">
-            DANIELLE<br />TENNE
-          </div>
-          <nav className="hidden gap-12 text-xs text-[#0a1b4d] md:flex">
-            <a href="#home" className="hover:opacity-60">Home</a>
-            <a href="#art" className="hover:opacity-60">Art</a>
-            <a href="#about" className="hover:opacity-60">About</a>
-          </nav>
-          <div className="hidden gap-4 text-xs md:flex">
-            <a href="#" className="hover:opacity-60">Instagram</a>
-            <a href="#" className="hover:opacity-60">LinkedIn</a>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero */}
       <section

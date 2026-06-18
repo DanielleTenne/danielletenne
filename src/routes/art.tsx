@@ -67,7 +67,15 @@ function ArtPage() {
     <div className="min-h-screen bg-[#f3f3f1]">
       <Header />
       <main className="px-10 py-16 md:px-[120px]">
-        <h1 className="mb-12 text-4xl font-extrabold leading-tight text-stone-800 md:text-5xl">
+        <h1
+          className="mb-12 font-extrabold"
+          style={{
+            fontSize: "60px",
+            lineHeight: "66px",
+            color: "#0a1b4d",
+            fontWeight: 800,
+          }}
+        >
           Art<br />playground
         </h1>
 

@@ -1,6 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { projects } from "@/lib/projects";
 import penlinkAsset from "../assets/work/penlink.jpg.asset.json";
 import kaiAsset from "../assets/work/kai-lighters.jpg.asset.json";
 import nBrandAsset from "../assets/work/n-brand.jpg.asset.json";

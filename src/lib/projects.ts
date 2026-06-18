@@ -23,7 +23,7 @@ export type Project = {
   sections: ProjectSection[];
 };
 
-export const projects: Project[] = [
+const projectsOrdered: Project[] = [
   {
     slug: "penlink-ui-system",
     title: "Penlink",

@@ -8,7 +8,7 @@ export function Header() {
   const activeClass = "underline decoration-1 underline-offset-4";
 
   return (
-    <header className="border-b border-transparent">
+    <header className="border-b-[0.5px] border-[#E3E3E3] bg-[#ECECEC]">
       <div className="flex items-center justify-between px-10 py-5 md:px-[120px]">
         <Link to="/">
           <img src={logoAsset.url} alt="Danielle Tenne" className="h-8 w-auto" />
@@ -17,7 +17,7 @@ export function Header() {
         {/* Desktop nav */}
         <nav className="hidden gap-12 text-xs text-[#0a1b4d] md:flex">
           <Link to="/" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }}>Home</Link>
-          <Link to="/" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }}>Art</Link>
+          <Link to="/art" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }}>Art</Link>
           <Link to="/about" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }}>About</Link>
         </nav>
         <div className="hidden gap-4 text-xs md:flex">

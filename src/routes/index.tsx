@@ -102,7 +102,7 @@ function Index() {
           backgroundSize: "32px 32px",
         }}
       >
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 py-20 md:grid-cols-2 md:py-28">
+        <div className="grid grid-cols-1 items-center gap-10 px-10 py-20 md:grid-cols-2 md:px-[120px] md:py-28">
           <div>
             <p className="mb-4 text-base font-medium">Hi, I'm Danielle</p>
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl">
@@ -125,7 +125,7 @@ function Index() {
       </section>
 
       {/* Selected Work */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section className="px-10 py-20 md:px-[120px]">
         <h2 className="mb-10 text-2xl font-extrabold">Selected Work</h2>
         <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
           {projects.map((p) => (
@@ -153,7 +153,7 @@ function Index() {
 
       {/* Contact */}
       <section id="about" className="bg-[#0a1b4d] py-24 text-white">
-        <div className="mx-auto max-w-7xl px-6 text-center">
+        <div className="px-10 text-center md:px-[120px]">
           <h2 className="mb-6 text-4xl font-extrabold md:text-5xl">Contact me</h2>
           <a
             href="mailto:hello@example.com"

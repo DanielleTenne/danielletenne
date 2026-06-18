@@ -30,7 +30,7 @@ export const Route = createFileRoute("/projects/$slug")({
   notFoundComponent: () => (
     <div className="min-h-screen bg-white text-[#0a1b4d]">
       <Header />
-      <div className="mx-auto max-w-7xl px-6 py-32 text-center">
+      <div className="px-10 py-32 text-center md:px-[120px]">
         <h1 className="text-3xl font-light">Project not found</h1>
         <Link to="/" className="mt-6 inline-block text-sm text-[#0a1b4d]/60 hover:opacity-60">
           ← Back home
@@ -62,7 +62,7 @@ function ProjectPage() {
     <div className="min-h-screen bg-white text-[#0a1b4d]">
       <Header />
 
-      <main className="mx-auto max-w-7xl px-4 sm:px-6">
+      <main className="px-10 md:px-[120px]">
         <div className="grid grid-cols-1 gap-12 pt-24 pb-12 md:grid-cols-12">
           <aside className="md:col-span-4 md:sticky md:top-28 self-start h-fit">
             <Link to="/" className="text-xs text-[#0a1b4d]/60 hover:opacity-60">

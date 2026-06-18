@@ -21,26 +21,38 @@ export const Route = createFileRoute("/")({
 });
 
 
-const artRow1 = [
-  { title: "Garden Keys", bg: "bg-emerald-100", w: "md:col-span-3" },
-  { title: "Eastern Pulse", bg: "bg-amber-50", w: "md:col-span-3" },
-  { title: "Portrait Study", bg: "bg-stone-200", w: "md:col-span-3" },
-  { title: "Night Sky", bg: "bg-slate-700", w: "md:col-span-3" },
+type ArtImage = { src: string; alt: string };
+
+const artImages: ArtImage[] = [
+  { src: artCover.url, alt: "Cover artwork" },
+  { src: artEastern.url, alt: "Eastern Pulse" },
+  { src: artHaifa.url, alt: "I Love Haifa" },
+  { src: artAnchors.url, alt: "Anchors" },
 ];
 
-const artRow2 = [
-  { title: "Black Trees", bg: "bg-gray-100", w: "md:col-span-3" },
-  { title: "Jars on Shelf", bg: "bg-yellow-200", w: "md:col-span-3" },
-  { title: "Anchors", bg: "bg-stone-100", w: "md:col-span-3" },
-  { title: "Shadow", bg: "bg-slate-900", w: "md:col-span-3" },
-];
+const artRow1: ArtImage[] = [artImages[0], artImages[1], artImages[2], artImages[3], artImages[1]];
+const artRow2: ArtImage[] = [artImages[2], artImages[3], artImages[0], artImages[1], artImages[2]];
+const artRow3: ArtImage[] = [artImages[3], artImages[0], artImages[1], artImages[2], artImages[0]];
 
-const artRow3 = [
-  { title: "Hearts", bg: "bg-stone-300", w: "md:col-span-3" },
-  { title: "Stone Wall", bg: "bg-zinc-400", w: "md:col-span-3" },
-  { title: "Bricks", bg: "bg-rose-200", w: "md:col-span-3" },
-  { title: "Flow", bg: "bg-teal-300", w: "md:col-span-3" },
-];
+function MarqueeRow({ images, direction }: { images: ArtImage[]; direction: "left" | "right" }) {
+  const animClass = direction === "left" ? "animate-marquee-left" : "animate-marquee-right";
+  const loop = [...images, ...images];
+  return (
+    <div className="overflow-hidden">
+      <div className={`flex w-max gap-6 ${animClass}`}>
+        {loop.map((img, idx) => (
+          <img
+            key={idx}
+            src={img.src}
+            alt={img.alt}
+            className="h-56 w-auto shrink-0 rounded-sm object-cover md:h-72 lg:h-80"
+            loading="lazy"
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function Index() {
   return (

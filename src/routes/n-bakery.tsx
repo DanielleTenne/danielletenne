@@ -10,12 +10,15 @@ import paperBags from "@/assets/work/n-bakery-paper-bags.jpg.asset.json";
 import elements from "@/assets/work/n-bakery-elements.jpg.asset.json";
 import patterns from "@/assets/work/n-bakery-patterns.jpg.asset.json";
 import tinGraphics from "@/assets/work/n-bakery-tin-graphics.jpg.asset.json";
+import croissants from "@/assets/work/n-bakery-croissants.jpg.asset.json";
+import coffeeCup from "@/assets/work/n-bakery-coffee-cup.jpg.asset.json";
+import takeawayCup from "@/assets/work/n-bakery-takeaway-cup.jpg.asset.json";
 
 const TITLE = "N Bakery";
 const DESC = "Designed a wide range of brand and marketing assets, including presentations, web pages, social media visuals, wall graphics, and printed materials.";
 const URL = "https://pixel-perfect-playbook-185.lovable.app/n-bakery";
 
-const IMAGES = [logo, logoVariations, windowDecal, storefront, packagingGrid, character, paperBags, elements, patterns, tinGraphics];
+const IMAGES = [logo, logoVariations, windowDecal, storefront, packagingGrid, character, paperBags, elements, patterns, tinGraphics, croissants, coffeeCup, takeawayCup];
 
 export const Route = createFileRoute("/n-bakery")({
   head: () => ({

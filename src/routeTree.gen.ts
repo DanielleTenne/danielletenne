@@ -10,6 +10,13 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ProjectDetailsRouteImport } from './routes/project-details'
+import { Route as NBakeryRouteImport } from './routes/n-bakery'
+import { Route as LittleWineBarRouteImport } from './routes/little-wine-bar'
+import { Route as KaiLightersRouteImport } from './routes/kai-lighters'
+import { Route as KaiAiRouteImport } from './routes/kai-ai'
+import { Route as InsaightsRouteImport } from './routes/insaights'
+import { Route as CobwebsRouteImport } from './routes/cobwebs'
+import { Route as ChicanoRouteImport } from './routes/chicano'
 import { Route as ArtRouteImport } from './routes/art'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -18,6 +25,41 @@ import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
 const ProjectDetailsRoute = ProjectDetailsRouteImport.update({
   id: '/project-details',
   path: '/project-details',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NBakeryRoute = NBakeryRouteImport.update({
+  id: '/n-bakery',
+  path: '/n-bakery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LittleWineBarRoute = LittleWineBarRouteImport.update({
+  id: '/little-wine-bar',
+  path: '/little-wine-bar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KaiLightersRoute = KaiLightersRouteImport.update({
+  id: '/kai-lighters',
+  path: '/kai-lighters',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KaiAiRoute = KaiAiRouteImport.update({
+  id: '/kai-ai',
+  path: '/kai-ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsaightsRoute = InsaightsRouteImport.update({
+  id: '/insaights',
+  path: '/insaights',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CobwebsRoute = CobwebsRouteImport.update({
+  id: '/cobwebs',
+  path: '/cobwebs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChicanoRoute = ChicanoRouteImport.update({
+  id: '/chicano',
+  path: '/chicano',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ArtRoute = ArtRouteImport.update({
@@ -45,6 +87,13 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/art': typeof ArtRoute
+  '/chicano': typeof ChicanoRoute
+  '/cobwebs': typeof CobwebsRoute
+  '/insaights': typeof InsaightsRoute
+  '/kai-ai': typeof KaiAiRoute
+  '/kai-lighters': typeof KaiLightersRoute
+  '/little-wine-bar': typeof LittleWineBarRoute
+  '/n-bakery': typeof NBakeryRoute
   '/project-details': typeof ProjectDetailsRoute
   '/projects/$slug': typeof ProjectsSlugRoute
 }
@@ -52,6 +101,13 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/art': typeof ArtRoute
+  '/chicano': typeof ChicanoRoute
+  '/cobwebs': typeof CobwebsRoute
+  '/insaights': typeof InsaightsRoute
+  '/kai-ai': typeof KaiAiRoute
+  '/kai-lighters': typeof KaiLightersRoute
+  '/little-wine-bar': typeof LittleWineBarRoute
+  '/n-bakery': typeof NBakeryRoute
   '/project-details': typeof ProjectDetailsRoute
   '/projects/$slug': typeof ProjectsSlugRoute
 }
@@ -60,19 +116,57 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/art': typeof ArtRoute
+  '/chicano': typeof ChicanoRoute
+  '/cobwebs': typeof CobwebsRoute
+  '/insaights': typeof InsaightsRoute
+  '/kai-ai': typeof KaiAiRoute
+  '/kai-lighters': typeof KaiLightersRoute
+  '/little-wine-bar': typeof LittleWineBarRoute
+  '/n-bakery': typeof NBakeryRoute
   '/project-details': typeof ProjectDetailsRoute
   '/projects/$slug': typeof ProjectsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/art' | '/project-details' | '/projects/$slug'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/art'
+    | '/chicano'
+    | '/cobwebs'
+    | '/insaights'
+    | '/kai-ai'
+    | '/kai-lighters'
+    | '/little-wine-bar'
+    | '/n-bakery'
+    | '/project-details'
+    | '/projects/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/art' | '/project-details' | '/projects/$slug'
+  to:
+    | '/'
+    | '/about'
+    | '/art'
+    | '/chicano'
+    | '/cobwebs'
+    | '/insaights'
+    | '/kai-ai'
+    | '/kai-lighters'
+    | '/little-wine-bar'
+    | '/n-bakery'
+    | '/project-details'
+    | '/projects/$slug'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/art'
+    | '/chicano'
+    | '/cobwebs'
+    | '/insaights'
+    | '/kai-ai'
+    | '/kai-lighters'
+    | '/little-wine-bar'
+    | '/n-bakery'
     | '/project-details'
     | '/projects/$slug'
   fileRoutesById: FileRoutesById
@@ -81,6 +175,13 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ArtRoute: typeof ArtRoute
+  ChicanoRoute: typeof ChicanoRoute
+  CobwebsRoute: typeof CobwebsRoute
+  InsaightsRoute: typeof InsaightsRoute
+  KaiAiRoute: typeof KaiAiRoute
+  KaiLightersRoute: typeof KaiLightersRoute
+  LittleWineBarRoute: typeof LittleWineBarRoute
+  NBakeryRoute: typeof NBakeryRoute
   ProjectDetailsRoute: typeof ProjectDetailsRoute
   ProjectsSlugRoute: typeof ProjectsSlugRoute
 }
@@ -92,6 +193,55 @@ declare module '@tanstack/react-router' {
       path: '/project-details'
       fullPath: '/project-details'
       preLoaderRoute: typeof ProjectDetailsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/n-bakery': {
+      id: '/n-bakery'
+      path: '/n-bakery'
+      fullPath: '/n-bakery'
+      preLoaderRoute: typeof NBakeryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/little-wine-bar': {
+      id: '/little-wine-bar'
+      path: '/little-wine-bar'
+      fullPath: '/little-wine-bar'
+      preLoaderRoute: typeof LittleWineBarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kai-lighters': {
+      id: '/kai-lighters'
+      path: '/kai-lighters'
+      fullPath: '/kai-lighters'
+      preLoaderRoute: typeof KaiLightersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kai-ai': {
+      id: '/kai-ai'
+      path: '/kai-ai'
+      fullPath: '/kai-ai'
+      preLoaderRoute: typeof KaiAiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insaights': {
+      id: '/insaights'
+      path: '/insaights'
+      fullPath: '/insaights'
+      preLoaderRoute: typeof InsaightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cobwebs': {
+      id: '/cobwebs'
+      path: '/cobwebs'
+      fullPath: '/cobwebs'
+      preLoaderRoute: typeof CobwebsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/chicano': {
+      id: '/chicano'
+      path: '/chicano'
+      fullPath: '/chicano'
+      preLoaderRoute: typeof ChicanoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/art': {
@@ -129,6 +279,13 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ArtRoute: ArtRoute,
+  ChicanoRoute: ChicanoRoute,
+  CobwebsRoute: CobwebsRoute,
+  InsaightsRoute: InsaightsRoute,
+  KaiAiRoute: KaiAiRoute,
+  KaiLightersRoute: KaiLightersRoute,
+  LittleWineBarRoute: LittleWineBarRoute,
+  NBakeryRoute: NBakeryRoute,
   ProjectDetailsRoute: ProjectDetailsRoute,
   ProjectsSlugRoute: ProjectsSlugRoute,
 }

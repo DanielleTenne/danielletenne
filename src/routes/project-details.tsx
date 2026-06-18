@@ -3,17 +3,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProjectMetadataTags } from "@/components/ProjectMetadataTags";
-import presentationsAsset from "@/assets/work/penlink-presentations.jpg.asset.json";
-import img1 from "@/assets/work/pd-penlink.jpg.asset.json";
-import img2 from "@/assets/work/pd-pd-2.jpg.asset.json";
-import img3 from "@/assets/work/pd-pd-3.jpg.asset.json";
-import img4 from "@/assets/work/pd-pd-4.jpg.asset.json";
-import img7 from "@/assets/work/pd-pd-7.jpg.asset.json";
-import img8 from "@/assets/work/pd-pd-8.jpg.asset.json";
-import img9 from "@/assets/work/pd-pd-9.jpg.asset.json";
-import img10 from "@/assets/work/pd-pd-10.jpg.asset.json";
-import img15 from "@/assets/work/pd-pd-15.jpg.asset.json";
-import img16 from "@/assets/work/pd-pd-16.jpg.asset.json";
+import penlink2 from "@/assets/work/penlink2.jpg.asset.json";
+import penlink3 from "@/assets/work/penlink3.jpg.asset.json";
+import penlink4 from "@/assets/work/penlink4.jpg.asset.json";
+import p3 from "@/assets/work/p_3.jpg.asset.json";
+import p4 from "@/assets/work/p_4.jpg.asset.json";
+import p6 from "@/assets/work/p_6.jpg.asset.json";
+import p7 from "@/assets/work/p_7.jpg.asset.json";
 
 export const Route = createFileRoute("/project-details")({
   head: () => ({
@@ -45,7 +41,8 @@ export const Route = createFileRoute("/project-details")({
   component: ProjectDetailsPage,
 });
 
-const IMAGES = [img1, img2, img3, img4, presentationsAsset, img7, img8, img9, img10, img15, img16];
+const IMAGES = [penlink2, penlink3, penlink4, p3, p4, p6, p7];
+
 
 function ProjectDetailsPage() {
   return (

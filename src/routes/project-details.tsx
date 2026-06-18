@@ -78,9 +78,9 @@ function ProjectDetailsPage() {
               Penlink
             </h1>
 
-            <p className="mt-4 text-sm font-medium text-[#3a5bd9]">
-              Design systems. Marketing collateral. Exhibition booth design.
-            </p>
+            <div className="mt-4">
+              <ProjectMetadataTags />
+            </div>
 
             <p className="mt-6 text-sm leading-relaxed text-[#0a1b4d]/80">
               Designed a wide range of brand and marketing assets, including

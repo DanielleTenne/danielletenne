@@ -1,14 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import penlinkAsset from "../assets/work/penlink.jpg.asset.json";
-import kaiAsset from "../assets/work/kai-lighters.jpg.asset.json";
-import nBrandAsset from "../assets/work/n-brand.jpg.asset.json";
-import tacoAsset from "../assets/work/taco-revolution.jpg.asset.json";
-import cobwebsAsset from "../assets/work/cobwebs.jpg.asset.json";
-import insightsAsset from "../assets/work/insights.jpg.asset.json";
-import stickerAsset from "../assets/work/sticker-pack.jpg.asset.json";
-import wineAsset from "../assets/work/little-wine-bar.jpg.asset.json";
+import { projects } from "@/lib/projects";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,16 +15,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const selectedWork = [
-  { title: "Penlink UI System", image: penlinkAsset.url },
-  { title: "Kai Lighters", image: kaiAsset.url },
-  { title: "N Brand Mark", image: nBrandAsset.url },
-  { title: "Taco Revolution", image: tacoAsset.url },
-  { title: "Cobwebs Technologies", image: cobwebsAsset.url },
-  { title: "Insights Building", image: insightsAsset.url },
-  { title: "Sticker Pack", image: stickerAsset.url },
-  { title: "Little Wine Bar", image: wineAsset.url },
-];
 
 const artRow1 = [
   { title: "Garden Keys", bg: "bg-emerald-100", w: "md:col-span-3" },
@@ -91,18 +74,22 @@ function Index() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <h2 className="mb-10 text-2xl font-extrabold">Selected Work</h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {selectedWork.map((w) => (
-            <div
-              key={w.title}
-              className="group relative aspect-square overflow-hidden rounded-sm bg-stone-100"
+          {projects.map((p) => (
+            <Link
+              key={p.slug}
+              to="/projects/$slug"
+              params={{ slug: p.slug }}
+              className="group relative block overflow-hidden rounded-sm bg-stone-100"
+              aria-label={p.title}
             >
               <img
-                src={w.image}
-                alt={w.title}
+                src={p.image}
+                alt={p.title}
                 loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="block h-auto w-full"
               />
-            </div>
+              <span className="pointer-events-none absolute inset-0 bg-[#020E3C]/50 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
+            </Link>
           ))}
         </div>
       </section>

@@ -1,14 +1,14 @@
-export function ProjectMetadataTags() {
-  const tags = [
-    "Product design",
-    "UX/UI Design",
-    "Design systems",
-    "User research",
-    "Usability testing",
-    "Web design",
-    "Prototyping",
-  ];
+const DEFAULT_TAGS = [
+  "Product design",
+  "UX/UI Design",
+  "Design systems",
+  "User research",
+  "Usability testing",
+  "Web design",
+  "Prototyping",
+];
 
+export function ProjectMetadataTags({ tags = DEFAULT_TAGS }: { tags?: string[] }) {
   return (
     <div className="flex flex-wrap gap-3">
       {tags.map((tag) => (

@@ -113,7 +113,7 @@ function Index() {
             </h1>
           </div>
           <div className="flex justify-center md:justify-end">
-            <div className="h-72 w-72 overflow-hidden rounded-full md:h-96 md:w-96">
+            <div className="h-72 w-72 overflow-hidden rounded-full aspect-square md:h-96 md:w-96">
               <img
                 src={portraitAsset.url}
                 alt="Portrait of Danielle"

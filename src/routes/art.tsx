@@ -82,7 +82,13 @@ function ArtPage() {
       <section className="bg-[#0a1b4d] py-24 text-white">
         <div className="px-10 text-center md:px-[120px]">
           <h2 className="mb-6 text-4xl font-extrabold md:text-5xl">Contact me</h2>
-          <a href="mailto:tenne.dani@gmail.com" className="text-sm text-sky-300 hover:underline">
+          <a
+            href="mailto:tenne.dani@gmail.com"
+            className="text-sm hover:underline"
+            style={{ color: "#4D72FA" }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#FFFFFF")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#4D72FA")}
+          >
             tenne.dani@gmail.com →
           </a>
         </div>

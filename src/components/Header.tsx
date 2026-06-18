@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 
 export function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const linkBase = "hover:opacity-60";
   const activeClass = "underline decoration-1 underline-offset-4";
 
@@ -10,6 +12,8 @@ export function Header() {
         <Link to="/" className="text-[11px] font-bold leading-tight tracking-wide">
           DANIELLE<br />TENNE
         </Link>
+
+        {/* Desktop nav */}
         <nav className="hidden gap-12 text-xs text-[#0a1b4d] md:flex">
           <Link to="/" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }}>Home</Link>
           <Link to="/" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }}>Art</Link>
@@ -19,7 +23,33 @@ export function Header() {
           <a href="#" className="hover:opacity-60">Instagram</a>
           <a href="#" className="hover:opacity-60">LinkedIn</a>
         </div>
+
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setMenuOpen((o) => !o)}
+          className="flex flex-col items-center justify-center gap-[5px] md:hidden"
+          aria-label="Toggle menu"
+        >
+          <span className={`block h-[1px] w-5 bg-current transition-transform duration-300 ${menuOpen ? "translate-y-[3px] rotate-45" : ""}`} />
+          <span className={`block h-[1px] w-5 bg-current transition-opacity duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+          <span className={`block h-[1px] w-5 bg-current transition-transform duration-300 ${menuOpen ? "-translate-y-[3px] -rotate-45" : ""}`} />
+        </button>
       </div>
+
+      {/* Mobile menu panel */}
+      {menuOpen && (
+        <div className="border-t border-border px-6 pb-6 pt-4 md:hidden">
+          <nav className="flex flex-col gap-4 text-xs text-[#0a1b4d]">
+            <Link to="/" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }} onClick={() => setMenuOpen(false)}>Home</Link>
+            <Link to="/" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }} onClick={() => setMenuOpen(false)}>Art</Link>
+            <Link to="/about" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }} onClick={() => setMenuOpen(false)}>About</Link>
+          </nav>
+          <div className="mt-4 flex flex-col gap-3 text-xs">
+            <a href="#" className="hover:opacity-60">Instagram</a>
+            <a href="#" className="hover:opacity-60">LinkedIn</a>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

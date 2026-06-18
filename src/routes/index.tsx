@@ -207,7 +207,15 @@ function ArtPlayground() {
       ref={sectionRef}
       className="w-full overflow-x-hidden bg-[#f3f3f1] py-24"
     >
-      <h2 className="mb-16 text-center text-5xl font-extrabold leading-tight text-stone-800 md:text-7xl">
+      <h2
+        className="mb-16 text-center font-extrabold"
+        style={{
+          fontSize: "60px",
+          lineHeight: "66px",
+          color: "#0a1b4d",
+          fontWeight: 800,
+        }}
+      >
         Art<br />Playground
       </h2>
 

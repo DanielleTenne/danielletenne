@@ -16,6 +16,7 @@ export type ProjectSection = {
 
 export type Project = {
   slug: string;
+  route: string;
   title: string;
   image: string;
   description: string;

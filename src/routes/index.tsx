@@ -1,6 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import penlinkAsset from "../assets/work/penlink.jpg.asset.json";
+import kaiAsset from "../assets/work/kai-lighters.jpg.asset.json";
+import nBrandAsset from "../assets/work/n-brand.jpg.asset.json";
+import tacoAsset from "../assets/work/taco-revolution.jpg.asset.json";
+import cobwebsAsset from "../assets/work/cobwebs.jpg.asset.json";
+import insightsAsset from "../assets/work/insights.jpg.asset.json";
+import stickerAsset from "../assets/work/sticker-pack.jpg.asset.json";
+import wineAsset from "../assets/work/little-wine-bar.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -15,14 +23,14 @@ export const Route = createFileRoute("/")({
 });
 
 const selectedWork = [
-  { title: "Penlink UI System", bg: "bg-slate-100", text: "text-slate-700" },
-  { title: "Kai Lighters", bg: "bg-[#1a1a3e]", text: "text-white" },
-  { title: "N Brand Mark", bg: "bg-[#2d2545]", text: "text-amber-100" },
-  { title: "Taco Revolution", bg: "bg-[#f5b800]", text: "text-red-700" },
-  { title: "Cobwebs Technologies", bg: "bg-[#1f3a4a]", text: "text-white" },
-  { title: "Insights Building", bg: "bg-sky-200", text: "text-slate-800" },
-  { title: "Sticker Pack", bg: "bg-[#7c4ddb]", text: "text-white" },
-  { title: "Little Wine Bar", bg: "bg-[#5c3a4a]", text: "text-stone-200" },
+  { title: "Penlink UI System", image: penlinkAsset.url },
+  { title: "Kai Lighters", image: kaiAsset.url },
+  { title: "N Brand Mark", image: nBrandAsset.url },
+  { title: "Taco Revolution", image: tacoAsset.url },
+  { title: "Cobwebs Technologies", image: cobwebsAsset.url },
+  { title: "Insights Building", image: insightsAsset.url },
+  { title: "Sticker Pack", image: stickerAsset.url },
+  { title: "Little Wine Bar", image: wineAsset.url },
 ];
 
 const artRow1 = [

@@ -33,6 +33,6 @@ export const Route = createFileRoute("/little-wine-bar")({
       title={TITLE}
       tags={["Branding & Identity", "Logo design", "Illustration", "Brand guidelines", "Print collateral"]}
       description={DESC}
-    />
+      images={IMAGES}
   ),
 });

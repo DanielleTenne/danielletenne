@@ -28,7 +28,7 @@ export const Route = createFileRoute("/kai-ai")({
   component: () => (
     <ProjectDetailsTemplate
       title={TITLE}
-      tags={["Brand identity", "Illustration", "Motion design"]}
+      tags={["Brand identity", "Brand Extension", "Illustration", "Motion design"]}
       description={DESC}
       images={IMAGES}
     />

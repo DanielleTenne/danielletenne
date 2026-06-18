@@ -3,6 +3,10 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { projects } from "@/lib/projects";
 import portraitAsset from "@/assets/portrait.gif.asset.json";
+import artCover from "@/assets/art/cover-pagmar.gif.asset.json";
+import artEastern from "@/assets/art/eastern-pulse.jpeg.asset.json";
+import artHaifa from "@/assets/art/i-love-haifa.gif.asset.json";
+import artAnchors from "@/assets/art/anchors.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({

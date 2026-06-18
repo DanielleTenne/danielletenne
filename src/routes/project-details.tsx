@@ -88,37 +88,6 @@ function ProjectDetailsPage() {
               and printed materials.
             </p>
 
-            <dl className="mt-8 space-y-4 text-sm">
-              <div>
-                <dt className="text-[11px] uppercase tracking-widest text-[#0a1b4d]/50">
-                  My Role
-                </dt>
-                <dd className="mt-1 text-[#0a1b4d]">
-                  Lead Visual Designer
-                </dd>
-              </div>
-              <div>
-                <dt className="text-[11px] uppercase tracking-widest text-[#0a1b4d]/50">
-                  Tools Used
-                </dt>
-                <dd className="mt-1 text-[#0a1b4d]">
-                  Figma, Adobe Illustrator, Photoshop, InDesign
-                </dd>
-              </div>
-              <div>
-                <dt className="text-[11px] uppercase tracking-widest text-[#0a1b4d]/50">
-                  Year
-                </dt>
-                <dd className="mt-1 text-[#0a1b4d]">2024</dd>
-              </div>
-            </dl>
-
-            <a
-              href="#"
-              className="mt-8 inline-flex items-center gap-2 rounded-full border border-[#0a1b4d] px-6 py-3 text-xs font-medium uppercase tracking-widest text-[#0a1b4d] transition hover:bg-[#0a1b4d] hover:text-white"
-            >
-              Visit Website →
-            </a>
           </aside>
 
           {/* RIGHT — scrollable content */}

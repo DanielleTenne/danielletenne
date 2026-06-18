@@ -10,16 +10,22 @@ import p4 from "@/assets/work/p_4.jpg.asset.json";
 import p6 from "@/assets/work/p_6.jpg.asset.json";
 import p7 from "@/assets/work/p_7.jpg.asset.json";
 
-const IMAGES = [penlink2, penlink3, penlink4, p3, p4, p6, p7];
+const DEFAULT_IMAGES = [penlink2, penlink3, penlink4, p3, p4, p6, p7];
+
+type ImageAsset = {
+  url: string;
+};
 
 export function ProjectDetailsTemplate({
   title,
   tags,
   description,
+  images = DEFAULT_IMAGES,
 }: {
   title: string;
   tags: string[];
   description: string;
+  images?: ImageAsset[];
 }) {
   return (
     <div className="min-h-screen bg-white text-[#0a1b4d] [&_a]:text-[#757575] [&_a:hover]:text-[#4D72FA] [&_button]:text-[#757575] [&_button:hover]:text-[#4D72FA]">
@@ -46,7 +52,7 @@ export function ProjectDetailsTemplate({
           </aside>
 
           <div className="space-y-6 md:col-span-8">
-            {IMAGES.map((asset, idx) => (
+            {images.map((asset, idx) => (
               <img
                 key={idx}
                 src={asset.url}
@@ -72,3 +78,4 @@ export function ProjectDetailsTemplate({
     </div>
   );
 }
+

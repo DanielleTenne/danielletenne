@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProjectMetadataTags } from "@/components/ProjectMetadataTags";
-import { projectsBySlug, type Project } from "@/lib/projects";
+import { projectsBySlug, type Project, type ProjectSection } from "@/lib/projects";
 
 export const Route = createFileRoute("/projects/$slug")({
   loader: ({ params }): Project => {

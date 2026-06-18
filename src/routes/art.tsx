@@ -8,6 +8,8 @@ import ayalev2 from "../assets/art/ayalev-2.gif.asset.json";
 import ayalev3 from "../assets/art/ayalev-3-2.gif.asset.json";
 import escapiz from "../assets/art/escapiz-1-2.gif.asset.json";
 import anchors from "../assets/art/anchors-2.jpg.asset.json";
+import mashpiin from "../assets/art/mashpiin.gif.asset.json";
+import halaylaHazeh3 from "../assets/art/halayla-hazeh-3-2.gif.asset.json";
 
 export const Route = createFileRoute("/art")({
   head: () => ({
@@ -33,12 +35,14 @@ const leftColumn: Piece[] = [
   { title: "I Love Haifa — Houses", ratio: "aspect-[16/9]", src: ayalev1.url },
   { title: "I Love Haifa — City", ratio: "aspect-[16/9]", src: ayalev3.url },
   { title: "Escapiz", ratio: "aspect-[16/9]", src: escapiz.url },
+  { title: "Mashpiin", ratio: "aspect-[16/9]", src: mashpiin.url },
 ];
 
 const rightColumn: Piece[] = [
   { title: "Eastern Pulse", ratio: "aspect-square", src: easternPulse.url },
   { title: "I Love Haifa — Kitchen", ratio: "aspect-[16/9]", src: ayalev2.url },
   { title: "Anchors", ratio: "aspect-square", src: anchors.url },
+  { title: "Halayla Hazeh", ratio: "aspect-[16/9]", src: halaylaHazeh3.url },
 ];
 
 function Tile({ piece }: { piece: Piece }) {

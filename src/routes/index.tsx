@@ -64,8 +64,12 @@ function Index() {
             </h1>
           </div>
           <div className="flex justify-center md:justify-end">
-            <div className="flex h-72 w-72 items-center justify-center rounded-full bg-gradient-to-br from-orange-300 via-pink-300 to-blue-400 md:h-96 md:w-96">
-              <span className="text-sm text-white/80">Portrait</span>
+            <div className="h-72 w-72 overflow-hidden rounded-full md:h-96 md:w-96">
+              <img
+                src={portraitAsset.url}
+                alt="Portrait of Danielle"
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
         </div>

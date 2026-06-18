@@ -11,8 +11,7 @@ export function Footer() {
           <Link to="/about" className="hover:opacity-70">About</Link>
         </nav>
         <div className="flex flex-col items-end gap-1">
-          <a href="#" className="hover:opacity-70">LinkedIn</a>
-          <a href="#" className="hover:opacity-70">Instagram</a>
+          <a href="https://www.linkedin.com/in/danielle-tenne/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70">LinkedIn</a>
         </div>
       </div>
     </footer>

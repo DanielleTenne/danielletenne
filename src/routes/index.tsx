@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -47,23 +49,7 @@ const artRow3 = [
 function Index() {
   return (
     <div className="min-h-screen bg-white font-sans text-[#0a1b4d]">
-      {/* Header */}
-      <header className="border-b border-transparent">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <div className="text-[11px] font-bold leading-tight tracking-wide">
-            DANIELLE<br />TENNE
-          </div>
-          <nav className="hidden gap-12 text-xs text-[#0a1b4d] md:flex">
-            <a href="#home" className="hover:opacity-60">Home</a>
-            <a href="#art" className="hover:opacity-60">Art</a>
-            <a href="#about" className="hover:opacity-60">About</a>
-          </nav>
-          <div className="hidden gap-4 text-xs md:flex">
-            <a href="#" className="hover:opacity-60">Instagram</a>
-            <a href="#" className="hover:opacity-60">LinkedIn</a>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero */}
       <section
@@ -152,21 +138,7 @@ function Index() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#0a1b4d] pb-10 text-white">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-xs md:flex-row">
-          <p className="opacity-70">© 2026 Danielle Tenne</p>
-          <nav className="flex gap-6">
-            <a href="#home" className="hover:opacity-70">Home</a>
-            <a href="#art" className="hover:opacity-70">Art</a>
-            <a href="#about" className="hover:opacity-70">About</a>
-          </nav>
-          <div className="flex flex-col items-end gap-1">
-            <a href="#" className="hover:opacity-70">LinkedIn</a>
-            <a href="#" className="hover:opacity-70">Instagram</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

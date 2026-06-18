@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Danielle Tenne" },
+      { name: "description", content: "Pixel Perfect Replica creates responsive landing pages that precisely match provided screenshots, including layout, navigation, and typography." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Danielle Tenne" },
+      { property: "og:description", content: "Pixel Perfect Replica creates responsive landing pages that precisely match provided screenshots, including layout, navigation, and typography." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Danielle Tenne" },
+      { name: "twitter:description", content: "Pixel Perfect Replica creates responsive landing pages that precisely match provided screenshots, including layout, navigation, and typography." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4efb86bd-ed0b-46fc-830d-73d41b568e75/id-preview-a7c71bd2--86a9fcc1-6364-4154-b138-67b2974fd8fa.lovable.app-1781768174351.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4efb86bd-ed0b-46fc-830d-73d41b568e75/id-preview-a7c71bd2--86a9fcc1-6364-4154-b138-67b2974fd8fa.lovable.app-1781768174351.png" },
     ],
     links: [
       {

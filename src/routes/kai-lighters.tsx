@@ -4,7 +4,7 @@ import brandbook from "@/assets/work/kai-brandbook.jpg.asset.json";
 import logo from "@/assets/work/kai-logo.jpg.asset.json";
 import appicon from "@/assets/work/kai-appicon.jpg.asset.json";
 import animation from "@/assets/work/kai-animation.gif.asset.json";
-import banners from "@/assets/work/kai-banners.jpg.asset.json";
+
 import phones from "@/assets/work/kai-phones.jpg.asset.json";
 import tshirts from "@/assets/work/kai-tshirts.jpg.asset.json";
 import beanie from "@/assets/work/kai-beanie.jpg.asset.json";

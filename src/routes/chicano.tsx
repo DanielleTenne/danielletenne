@@ -21,7 +21,7 @@ import chicano17 from "@/assets/work/chicano-17.jpeg.asset.json";
 const TITLE = "CHICANO";
 const DESC = "Taco Revolution~ Branding for a Mexican food truck. Designed at Craft studio.";
 const URL = "https://pixel-perfect-playbook-185.lovable.app/chicano";
-const IMAGES = [chicano1, chicano2, chicano3, chicano4, chicano5, chicano6, chicano7, chicano8, chicano9, chicano10, chicano11, chicano12, chicano13, chicano14, chicano15, chicano16, chicano17];
+const IMAGES: { url: string }[] = [chicano1, chicano2, chicano3, chicano4, chicano5, chicano6, chicano7, chicano8, chicano9, chicano10, chicano11, chicano12, chicano13, chicano14, chicano15, chicano16, chicano17];
 
 export const Route = createFileRoute("/chicano")({
   head: () => ({

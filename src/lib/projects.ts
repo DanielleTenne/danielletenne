@@ -39,31 +39,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "kai-lighters",
-    title: "Kai Lighters",
-    image: kaiAsset.url,
-    description:
-      "Brand identity and product design for Kai Lighters — a playful, glowing visual world combining whimsical illustration with bold typography.",
-    tags: ["Brand identity", "Logo design", "Illustration", "App icon", "Packaging"],
-    sections: [
-      { title: "Logo & mark", ratio: "aspect-[16/10]", body: "A glowing firefly mark paired with a friendly custom wordmark." },
-      { title: "App icon", ratio: "aspect-square" },
-      { title: "Color & typography", ratio: "aspect-[16/9]", body: "Deep midnight blues paired with warm yellow glows and electric mint accents." },
-    ],
-  },
-  {
-    slug: "n-brand-mark",
-    title: "N Brand Mark",
-    image: nBrandAsset.url,
-    description:
-      "Identity design for Naaman's bakery — a warm, handcrafted logo system rooted in traditional typography and organic shapes.",
-    tags: ["Brand identity", "Logo design", "Typography", "Packaging"],
-    sections: [
-      { title: "Primary mark", ratio: "aspect-[16/10]", body: "A custom serif N framed in an organic, hand-drawn shape." },
-      { title: "Applications", ratio: "aspect-[16/9]" },
-    ],
-  },
-  {
     slug: "taco-revolution",
     title: "Taco Revolution",
     image: tacoAsset.url,
@@ -74,18 +49,6 @@ export const projects: Project[] = [
       { title: "Brand campaign", ratio: "aspect-[16/9]", body: "Halftone treatments and stacked condensed type drive a punk-inspired visual language." },
       { title: "Jaguar mark", ratio: "aspect-square" },
       { title: "Menu & collateral", ratio: "aspect-[16/10]" },
-    ],
-  },
-  {
-    slug: "cobwebs-technologies",
-    title: "Cobwebs Technologies",
-    image: cobwebsAsset.url,
-    description:
-      "Corporate identity and marketing collateral for Cobwebs Technologies — an intelligence platform built on trust, precision, and clarity.",
-    tags: ["Brand identity", "Corporate design", "Web design", "Print"],
-    sections: [
-      { title: "Logo system", ratio: "aspect-[16/10]" },
-      { title: "Marketing materials", ratio: "aspect-[16/9]", body: "Editorial layouts and dense data-driven visuals built on a confident dark palette." },
     ],
   },
   {
@@ -101,6 +64,19 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "kai-lighters",
+    title: "Kai Lighters",
+    image: kaiAsset.url,
+    description:
+      "Brand identity and product design for Kai Lighters — a playful, glowing visual world combining whimsical illustration with bold typography.",
+    tags: ["Brand identity", "Logo design", "Illustration", "App icon", "Packaging"],
+    sections: [
+      { title: "Logo & mark", ratio: "aspect-[16/10]", body: "A glowing firefly mark paired with a friendly custom wordmark." },
+      { title: "App icon", ratio: "aspect-square" },
+      { title: "Color & typography", ratio: "aspect-[16/9]", body: "Deep midnight blues paired with warm yellow glows and electric mint accents." },
+    ],
+  },
+  {
     slug: "sticker-pack",
     title: "Sticker Pack",
     image: stickerAsset.url,
@@ -110,6 +86,30 @@ export const projects: Project[] = [
     sections: [
       { title: "Sticker collection", ratio: "aspect-square", body: "A vibrant cast of characters and warm phrases designed for quick emotional delivery." },
       { title: "Lettering studies", ratio: "aspect-[16/9]" },
+    ],
+  },
+  {
+    slug: "n-brand-mark",
+    title: "N Brand Mark",
+    image: nBrandAsset.url,
+    description:
+      "Identity design for Naaman's bakery — a warm, handcrafted logo system rooted in traditional typography and organic shapes.",
+    tags: ["Brand identity", "Logo design", "Typography", "Packaging"],
+    sections: [
+      { title: "Primary mark", ratio: "aspect-[16/10]", body: "A custom serif N framed in an organic, hand-drawn shape." },
+      { title: "Applications", ratio: "aspect-[16/9]" },
+    ],
+  },
+  {
+    slug: "cobwebs-technologies",
+    title: "Cobwebs Technologies",
+    image: cobwebsAsset.url,
+    description:
+      "Corporate identity and marketing collateral for Cobwebs Technologies — an intelligence platform built on trust, precision, and clarity.",
+    tags: ["Brand identity", "Corporate design", "Web design", "Print"],
+    sections: [
+      { title: "Logo system", ratio: "aspect-[16/10]" },
+      { title: "Marketing materials", ratio: "aspect-[16/9]", body: "Editorial layouts and dense data-driven visuals built on a confident dark palette." },
     ],
   },
   {

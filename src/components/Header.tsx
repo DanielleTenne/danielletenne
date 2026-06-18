@@ -42,7 +42,7 @@ export function Header() {
         <div className="border-t border-border px-10 pb-6 pt-4 md:hidden">
           <nav className="flex flex-col gap-4 text-xs text-[#0a1b4d]">
             <Link to="/" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }} onClick={() => setMenuOpen(false)}>Home</Link>
-            <Link to="/" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }} onClick={() => setMenuOpen(false)}>Art</Link>
+            <Link to="/art" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }} onClick={() => setMenuOpen(false)}>Art</Link>
             <Link to="/about" className={linkBase} activeProps={{ className: `${linkBase} ${activeClass}` }} onClick={() => setMenuOpen(false)}>About</Link>
           </nav>
           <div className="mt-4 flex flex-col gap-3 text-xs">

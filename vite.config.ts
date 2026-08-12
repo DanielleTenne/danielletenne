@@ -8,7 +8,9 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   vite: {
-    base: '/danielletenne/',
+    // Served from the domain root on Vercel/Lovable. Set BASE_PATH only for
+    // sub-path hosting like GitHub Pages (e.g. BASE_PATH=/danielletenne/).
+    base: process.env.BASE_PATH || '/',
   },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
